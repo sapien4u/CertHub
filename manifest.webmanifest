@@ -1,0 +1,41 @@
+{
+  "name": "CertHub — Certification Study Portal",
+  "short_name": "CertHub",
+  "description": "CertHub is a free, offline-first study portal for technology certifications — deep-dive modules, a scenario question bank, timed mock exams, flashcards, and hands-on labs, all tracked locally in your browser. Flagship track: GH-300 GitHub Copilot, with Azure AI tracks on the way.",
+  "lang": "en",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#0d1526",
+  "theme_color": "#0d1526",
+  "categories": [
+    "education",
+    "productivity"
+  ],
+  "icons": [
+    {
+      "src": "assets/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "assets/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

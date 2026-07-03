@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="CertHub — offline-first certification study portal">
+  <defs>
+    <linearGradient id="ch-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0d1526"/>
+      <stop offset="1" stop-color="#16223b"/>
+    </linearGradient>
+    <linearGradient id="ch-badge" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#5b9bff"/>
+      <stop offset="1" stop-color="#3b7dff"/>
+    </linearGradient>
+    <radialGradient id="ch-glow" cx="0.8" cy="0.15" r="0.7">
+      <stop offset="0" stop-color="#3b7dff" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#3b7dff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#ch-bg)"/>
+  <rect width="1200" height="630" fill="url(#ch-glow)"/>
+
+  <!-- Badge -->
+  <g transform="translate(96,150)">
+    <rect width="150" height="150" rx="34" fill="url(#ch-badge)"/>
+    <path d="M42 78 L66 105 L112 50" fill="none" stroke="#ffffff" stroke-width="17"
+          stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Wordmark -->
+  <text x="300" y="235" font-family="Segoe UI, system-ui, -apple-system, Roboto, Helvetica, Arial, sans-serif"
+        font-size="108" font-weight="800" fill="#e7edf8">CertHub</text>
+  <text x="302" y="300" font-family="Segoe UI, system-ui, -apple-system, Roboto, Helvetica, Arial, sans-serif"
+        font-size="40" font-weight="600" fill="#9db0d0">Certification study portal</text>
+
+  <!-- Feature line -->
+  <text x="98" y="430" font-family="Segoe UI, system-ui, -apple-system, Roboto, Helvetica, Arial, sans-serif"
+        font-size="32" font-weight="600" fill="#e7edf8">Question bank · Mock exams · Flashcards · Hands-on labs</text>
+  <text x="98" y="480" font-family="Segoe UI, system-ui, -apple-system, Roboto, Helvetica, Arial, sans-serif"
+        font-size="28" font-weight="500" fill="#6c7f9f">Offline-first · Deep-dive modules · Scenario practice · Weak-area analysis</text>
+
+  <!-- Accent divider -->
+  <rect x="98" y="536" width="1004" height="3" rx="1.5" fill="#26324f"/>
+
+  <!-- Credit -->
+  <text x="98" y="582" font-family="Segoe UI, system-ui, -apple-system, Roboto, Helvetica, Arial, sans-serif"
+        font-size="26" font-weight="600" fill="#9db0d0">Created by Sandeep Augustine</text>
+  <text x="1102" y="582" text-anchor="end" font-family="Segoe UI, system-ui, -apple-system, Roboto, Helvetica, Arial, sans-serif"
+        font-size="26" font-weight="600" fill="#34d399">certhub</text>
+</svg>

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sapien4u.github.io/CertHub/sitemap.xml

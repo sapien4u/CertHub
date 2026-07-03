@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsible AI overview · GH-300 · CertHub</title>
+    <meta name="description" content="Responsible AI overview — study guides, question banks, mock exams, and flashcards on CertHub, the offline-first certification study portal." />
+    <meta name="author" content="Sandeep Augustine" />
+    <meta name="keywords" content="certifications, certification study portal, exam prep, question bank, mock exam, flashcards, GH-300, GitHub Copilot certification, Azure AI certification, responsible AI, prompt engineering" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://sapien4u.github.io/CertHub/gh-300/04-responsible-ai/responsible-ai-overview" />
+    <meta name="theme-color" content="#0d1526" />
+
+    <link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/icons/favicon-32.png" />
+    <link rel="apple-touch-icon" href="../../assets/icons/apple-touch-icon.png" />
+    <link rel="manifest" href="../../manifest.webmanifest" />
+
+    <!-- Open Graph / social preview -->
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="CertHub" />
+    <meta property="og:title" content="Responsible AI overview · CertHub" />
+    <meta property="og:description" content="Responsible AI overview — study guides, question banks, mock exams, and flashcards on CertHub, the offline-first certification study portal." />
+    <meta property="og:url" content="https://sapien4u.github.io/CertHub/gh-300/04-responsible-ai/responsible-ai-overview" />
+    <meta property="og:image" content="https://sapien4u.github.io/CertHub/assets/social/og-cover.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="CertHub — offline-first certification study portal" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Responsible AI overview · CertHub" />
+    <meta name="twitter:description" content="Responsible AI overview — study guides, question banks, mock exams, and flashcards on CertHub, the offline-first certification study portal." />
+    <meta name="twitter:image" content="https://sapien4u.github.io/CertHub/assets/social/og-cover.png" />
+
+    <link rel="stylesheet" href="../../assets/css/styles.css" />
+    <script>
+      // Set theme before paint to avoid a flash of the wrong theme.
+      (function () {
+        try {
+          var t = localStorage.getItem("certhub:theme");
+          if (t) {
+            try { t = JSON.parse(t); } catch (e) {}
+            if (t === "dark" || t === "light")
+              document.documentElement.setAttribute("data-theme", t);
+          }
+        } catch (e) {}
+      })();
+    </script>
+    
+  </head>
+  <body class="" data-page="gh_300_04_responsible_ai_responsible_ai_overview" data-root="../../" data-url="gh-300/04-responsible-ai/responsible-ai-overview" data-title="Responsible AI overview" data-cert="gh-300">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="topbar">
+      <button class="icon-btn nav-toggle" aria-label="Toggle navigation" data-action="toggle-nav">&#9776;</button>
+      <a class="brand" href="../../">
+        <span class="brand-mark">C</span><span class="brand-name">CertHub</span>
+      </a>
+
+      <button class="search-trigger" data-action="open-search" aria-label="Search">
+        <span class="search-ico">&#128269;</span>
+        <span class="search-label">Search content</span>
+        <span class="search-kbd">Ctrl K</span>
+      </button>
+
+      <div class="topbar-actions">
+        <button class="icon-btn" data-action="toggle-bookmark" title="Bookmark this page" aria-label="Bookmark this page">&#9734;</button>
+        <button class="icon-btn" data-action="print" title="Print this page" aria-label="Print this page">&#128424;</button>
+        <button class="icon-btn theme-btn" data-action="toggle-theme" title="Toggle dark mode" aria-label="Toggle dark mode">
+          <span class="theme-ico-dark">&#9790;</span><span class="theme-ico-light">&#9728;</span>
+        </button>
+      </div>
+    </header>
+
+    <div class="shell">
+      <aside class="sidebar" id="sidebar" aria-label="Documentation navigation">
+        <nav class="left-nav">
+          <a class="nav-cert" href="../../gh-300/">GH-300 Overview</a>
+<details class="nav-group">
+<summary>Module 1 · Introduction</summary>
+<ul>
+<li><a href="../../gh-300/01-introduction/what-is-github-copilot">What is GitHub Copilot</a></li>
+<li><a href="../../gh-300/01-introduction/ai-assistants-and-history">AI coding assistants &amp; history</a></li>
+<li><a href="../../gh-300/01-introduction/how-copilot-works">How Copilot works</a></li>
+<li><a href="../../gh-300/01-introduction/exam-overview">Exam overview &amp; objectives</a></li>
+</ul></details>
+<details class="nav-group">
+<summary>Module 2 · Copilot Fundamentals</summary>
+<ul>
+<li><a href="../../gh-300/02-fundamentals/inline-completion">Inline code completion</a></li>
+<li><a href="../../gh-300/02-fundamentals/copilot-chat">Copilot Chat</a></li>
+<li><a href="../../gh-300/02-fundamentals/edit-and-agent-mode">Edit mode &amp; Agent mode</a></li>
+<li><a href="../../gh-300/02-fundamentals/plan-mode">Plan Mode</a></li>
+<li><a href="../../gh-300/02-fundamentals/agent-sessions-and-subagents">Agent sessions &amp; sub-agents</a></li>
+<li><a href="../../gh-300/02-fundamentals/mcp-and-extensibility">MCP &amp; extensibility</a></li>
+<li><a href="../../gh-300/02-fundamentals/copilot-cli">Copilot in the CLI</a></li>
+<li><a href="../../gh-300/02-fundamentals/context-and-prompt-files">Context &amp; prompt files</a></li>
+<li><a href="../../gh-300/02-fundamentals/custom-instructions">Custom instructions</a></li>
+<li><a href="../../gh-300/02-fundamentals/pull-requests-and-code-review">Pull requests &amp; code review</a></li>
+<li><a href="../../gh-300/02-fundamentals/tests-docs-and-refactoring">Tests, docs, refactoring &amp; debugging</a></li>
+</ul></details>
+<details class="nav-group">
+<summary>Module 3 · Prompt Engineering</summary>
+<ul>
+<li><a href="../../gh-300/03-prompt-engineering/prompting-principles">Prompting principles</a></li>
+<li><a href="../../gh-300/03-prompt-engineering/prompting-techniques">Prompting techniques</a></li>
+<li><a href="../../gh-300/03-prompt-engineering/context-engineering">Context engineering</a></li>
+<li><a href="../../gh-300/03-prompt-engineering/iteration-and-templates">Iteration &amp; prompt templates</a></li>
+</ul></details>
+<details class="nav-group" open>
+<summary>Module 4 · Responsible AI</summary>
+<ul>
+<li><a href="../../gh-300/04-responsible-ai/responsible-ai-overview" class="active">Responsible AI overview</a></li>
+<li><a href="../../gh-300/04-responsible-ai/security-and-privacy">Security &amp; privacy</a></li>
+<li><a href="../../gh-300/04-responsible-ai/ip-licensing-and-duplication">IP, licensing &amp; duplication</a></li>
+<li><a href="../../gh-300/04-responsible-ai/validation-and-human-review">Validation &amp; human review</a></li>
+</ul></details>
+<details class="nav-group">
+<summary>Module 5 · Enterprise Features</summary>
+<ul>
+<li><a href="../../gh-300/05-enterprise/plans-and-comparison">Plans &amp; feature comparison</a></li>
+<li><a href="../../gh-300/05-enterprise/policies-and-governance">Policies &amp; governance</a></li>
+<li><a href="../../gh-300/05-enterprise/context-indexing-and-knowledge">Context, indexing &amp; knowledge bases</a></li>
+<li><a href="../../gh-300/05-enterprise/spaces-and-spark">Copilot Spaces &amp; Spark</a></li>
+<li><a href="../../gh-300/05-enterprise/rest-api-and-management">Management REST API &amp; audit logs</a></li>
+<li><a href="../../gh-300/05-enterprise/security-and-controls">Security &amp; access controls</a></li>
+</ul></details>
+<details class="nav-group">
+<summary>Module 6 · Developer Productivity</summary>
+<ul>
+<li><a href="../../gh-300/06-productivity/dotnet">.NET 8 &amp; C#</a></li>
+<li><a href="../../gh-300/06-productivity/angular">Angular 18</a></li>
+<li><a href="../../gh-300/06-productivity/azure">Azure</a></li>
+<li><a href="../../gh-300/06-productivity/sql-and-data">SQL Server &amp; data</a></li>
+<li><a href="../../gh-300/06-productivity/git-and-devops">Git &amp; Azure DevOps</a></li>
+</ul></details>
+<details class="nav-group">
+<summary>Module 7 · Cheat Sheets</summary>
+<ul>
+<li><a href="../../gh-300/08-cheat-sheets/prompt-engineering-cheatsheet">Prompt engineering cheat sheet</a></li>
+<li><a href="../../gh-300/08-cheat-sheets/feature-and-plan-comparison">Feature &amp; plan comparison</a></li>
+<li><a href="../../gh-300/08-cheat-sheets/responsible-ai-and-security">Responsible AI &amp; security</a></li>
+<li><a href="../../gh-300/08-cheat-sheets/exam-day-tips">Exam-day tips</a></li>
+</ul></details>
+<div class="nav-section-label">Practice &amp; Tools</div>
+<ul class="nav-tools">
+<li><a href="../../gh-300/dashboard">Study Dashboard</a></li>
+<li><a href="../../gh-300/question-bank">Question Bank</a></li>
+<li><a href="../../gh-300/mock-tests">Mock Exams</a></li>
+<li><a href="../../gh-300/flashcards">Flashcards</a></li>
+<li><a href="../../gh-300/labs">Hands-on Labs</a></li>
+</ul>
+        </nav>
+      </aside>
+      <div class="sidebar-scrim" data-action="toggle-nav"></div>
+
+      <main class="main" id="main">
+        <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="../../">Home</a><span class="sep">/</span><a href="../../gh-300/">GH-300</a><span class="sep">/</span><span>Module 4 · Responsible AI</span><span class="sep">/</span><span aria-current="page">Responsible AI overview</span></nav>
+
+        <div class="doc-toolbar">
+          <span class="read-status" data-role="read-status"></span>
+          <div class="doc-toolbar-actions">
+            <label class="mark-read">
+              <input type="checkbox" data-action="mark-read" /> Mark as complete
+            </label>
+          </div>
+        </div>
+
+        <article class="doc" data-role="doc">
+          <header class="doc-head"><div class="eyebrow">Module 4 · Responsible AI</div><h1>Responsible AI overview</h1></header>
+<p>Responsible AI is a core GH-300 domain. It covers the risks inherent in generative AI and the practices — above all, <strong>human oversight</strong> — that keep Copilot use safe, fair, and accountable.</p>
+<h2 id="key-risks" tabindex="-1"><a class="header-anchor" href="#key-risks"><span>Key risks</span></a></h2>
+<h3 id="hallucinations" tabindex="-1"><a class="header-anchor" href="#hallucinations"><span>Hallucinations</span></a></h3>
+<p>Copilot can produce output that is <strong>confident but wrong</strong>: nonexistent APIs, invented parameters, plausible-but-incorrect logic. This stems directly from its probabilistic, generative nature.</p>
+<h3 id="bias-and-fairness" tabindex="-1"><a class="header-anchor" href="#bias-and-fairness"><span>Bias and fairness</span></a></h3>
+<p>Because models learn from large public datasets, they can reflect <strong>biases</strong> present in that data — in naming, assumptions, examples, or comments. Outputs should be reviewed for fairness and inclusivity.</p>
+<h3 id="over-reliance-automation-bias" tabindex="-1"><a class="header-anchor" href="#over-reliance-automation-bias"><span>Over-reliance / automation bias</span></a></h3>
+<p>The tendency to trust automated output too readily. The more fluent the suggestion, the easier it is to skip scrutiny — which is exactly when errors slip through.</p>
+<h3 id="security-and-quality" tabindex="-1"><a class="header-anchor" href="#security-and-quality"><span>Security and quality</span></a></h3>
+<p>Generated code may contain vulnerabilities or poor practices learned from training data. It is not pre-verified for your context.</p>
+<h2 id="the-human-in-the-loop-principle" tabindex="-1"><a class="header-anchor" href="#the-human-in-the-loop-principle"><span>The human-in-the-loop principle</span></a></h2>
+<p>The unifying answer across this domain: <strong>the developer is accountable.</strong> Copilot assists; humans decide. Every suggestion must be reviewed, tested, and validated before it ships.</p>
+<div class="callout callout-tip"><div class="callout-title"><span class="callout-icon" aria-hidden="true">✓</span>Exam Tip</div><div class="callout-body">
+<p>When a Responsible-AI question offers an option involving human review, validation, or developer accountability, it is very often the correct answer. Copilot <strong>augments</strong> developers; it does not replace their judgement or responsibility.</p>
+</div></div>
+<h2 id="practices-that-mitigate-the-risks" tabindex="-1"><a class="header-anchor" href="#practices-that-mitigate-the-risks"><span>Practices that mitigate the risks</span></a></h2>
+<ul>
+<li><strong>Review everything</strong> Copilot produces before accepting or merging.</li>
+<li><strong>Test</strong> generated code, including edge cases and security-sensitive paths.</li>
+<li><strong>Scan</strong> for vulnerabilities (SAST, dependency scanning, secret scanning).</li>
+<li><strong>Verify</strong> APIs, packages, and licences actually exist and are appropriate.</li>
+<li><strong>Watch for bias</strong> in naming, examples, and assumptions.</li>
+<li><strong>Keep humans accountable</strong> for decisions, especially in high-stakes code.</li>
+</ul>
+<div class="callout callout-best-practice"><div class="callout-title"><span class="callout-icon" aria-hidden="true">★</span>Best Practice</div><div class="callout-body">
+<p>Adopt a &quot;trust but verify&quot; stance as a team norm: Copilot output enters the same review, test, and security gates as any other code — no exceptions because &quot;the AI wrote it.&quot;</p>
+</div></div>
+<div class="callout callout-mistake"><div class="callout-title"><span class="callout-icon" aria-hidden="true">⚠</span>Common Mistake</div><div class="callout-body">
+<p>Framing Copilot as an authority. It is a probabilistic assistant. Treating its output as vetted truth is the root cause of most Responsible-AI failures.</p>
+</div></div>
+
+        </article>
+
+        <div class="prev-next"><a class="pn prev" href="../../gh-300/03-prompt-engineering/iteration-and-templates"><span class="pn-dir">Previous</span><span class="pn-title">Iteration &amp; prompt templates</span></a><a class="pn next" href="../../gh-300/04-responsible-ai/security-and-privacy"><span class="pn-dir">Next</span><span class="pn-title">Security &amp; privacy</span></a></div>
+
+        <footer class="doc-footer">
+          <p class="doc-footer-report">
+            Spotted a mistake on this page?
+            <button type="button" class="linklike" data-action="open-feedback" data-feedback-type="content">Report an issue</button>
+            ·
+            <button type="button" class="linklike" data-action="open-feedback" data-feedback-type="suggest-topic">Suggest a topic</button>
+          </p>
+          <p>&copy; 2026 CertHub · Created by
+            <a href="https://www.linkedin.com/in/sandeepaugustine" target="_blank" rel="noopener noreferrer">Sandeep Augustine</a>
+          </p>
+        </footer>
+      </main>
+
+      <aside class="toc-rail"><nav class="on-this-page" aria-label="On this page"><h4>On this page</h4><ul><li class="toc-2"><a href="#key-risks">Key risks</a></li>
+<li class="toc-3"><a href="#hallucinations">Hallucinations</a></li>
+<li class="toc-3"><a href="#bias-and-fairness">Bias and fairness</a></li>
+<li class="toc-3"><a href="#over-reliance-automation-bias">Over-reliance / automation bias</a></li>
+<li class="toc-3"><a href="#security-and-quality">Security and quality</a></li>
+<li class="toc-2"><a href="#the-human-in-the-loop-principle">The human-in-the-loop principle</a></li>
+<li class="toc-2"><a href="#practices-that-mitigate-the-risks">Practices that mitigate the risks</a></li></ul></nav></aside>
+    </div>
+
+    <!-- Search overlay -->
+    <div class="search-overlay" data-role="search-overlay" hidden>
+      <div class="search-box" role="dialog" aria-modal="true" aria-label="Search">
+        <input type="search" class="search-input" data-role="search-input" placeholder="Search all content…" autocomplete="off" />
+        <div class="search-results" data-role="search-results"></div>
+        <div class="search-hint">Press <kbd>Esc</kbd> to close · <kbd>&uarr;</kbd> <kbd>&darr;</kbd> to navigate · <kbd>Enter</kbd> to open</div>
+      </div>
+    </div>
+
+    <script src="../../assets/data/search-index.js"></script>
+    <script src="../../assets/data/content-data.js"></script>
+    <script type="module" src="../../assets/js/lib/feedback.js"></script>
+    <script src="../../assets/js/app.js"></script>
+    
+  </body>
+</html>

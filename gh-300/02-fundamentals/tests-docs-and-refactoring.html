@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tests, docs, refactoring & debugging · GH-300 · CertHub</title>
+    <meta name="description" content="Tests, docs, refactoring &amp; debugging — study guides, question banks, mock exams, and flashcards on CertHub, the offline-first certification study portal." />
+    <meta name="author" content="Sandeep Augustine" />
+    <meta name="keywords" content="certifications, certification study portal, exam prep, question bank, mock exam, flashcards, GH-300, GitHub Copilot certification, Azure AI certification, responsible AI, prompt engineering" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://sapien4u.github.io/CertHub/gh-300/02-fundamentals/tests-docs-and-refactoring" />
+    <meta name="theme-color" content="#0d1526" />
+
+    <link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/icons/favicon-32.png" />
+    <link rel="apple-touch-icon" href="../../assets/icons/apple-touch-icon.png" />
+    <link rel="manifest" href="../../manifest.webmanifest" />
+
+    <!-- Open Graph / social preview -->
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="CertHub" />
+    <meta property="og:title" content="Tests, docs, refactoring &amp; debugging · CertHub" />
+    <meta property="og:description" content="Tests, docs, refactoring &amp; debugging — study guides, question banks, mock exams, and flashcards on CertHub, the offline-first certification study portal." />
+    <meta property="og:url" content="https://sapien4u.github.io/CertHub/gh-300/02-fundamentals/tests-docs-and-refactoring" />
+    <meta property="og:image" content="https://sapien4u.github.io/CertHub/assets/social/og-cover.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="CertHub — offline-first certification study portal" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Tests, docs, refactoring &amp; debugging · CertHub" />
+    <meta name="twitter:description" content="Tests, docs, refactoring &amp; debugging — study guides, question banks, mock exams, and flashcards on CertHub, the offline-first certification study portal." />
+    <meta name="twitter:image" content="https://sapien4u.github.io/CertHub/assets/social/og-cover.png" />
+
+    <link rel="stylesheet" href="../../assets/css/styles.css" />
+    <script>
+      // Set theme before paint to avoid a flash of the wrong theme.
+      (function () {
+        try {
+          var t = localStorage.getItem("certhub:theme");
+          if (t) {
+            try { t = JSON.parse(t); } catch (e) {}
+            if (t === "dark" || t === "light")
+              document.documentElement.setAttribute("data-theme", t);
+          }
+        } catch (e) {}
+      })();
+    </script>
+    
+  </head>
+  <body class="" data-page="gh_300_02_fundamentals_tests_docs_and_refactoring" data-root="../../" data-url="gh-300/02-fundamentals/tests-docs-and-refactoring" data-title="Tests, docs, refactoring & debugging" data-cert="gh-300">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="topbar">
+      <button class="icon-btn nav-toggle" aria-label="Toggle navigation" data-action="toggle-nav">&#9776;</button>
+      <a class="brand" href="../../">
+        <span class="brand-mark">C</span><span class="brand-name">CertHub</span>
+      </a>
+
+      <button class="search-trigger" data-action="open-search" aria-label="Search">
+        <span class="search-ico">&#128269;</span>
+        <span class="search-label">Search content</span>
+        <span class="search-kbd">Ctrl K</span>
+      </button>
+
+      <div class="topbar-actions">
+        <button class="icon-btn" data-action="toggle-bookmark" title="Bookmark this page" aria-label="Bookmark this page">&#9734;</button>
+        <button class="icon-btn" data-action="print" title="Print this page" aria-label="Print this page">&#128424;</button>
+        <button class="icon-btn theme-btn" data-action="toggle-theme" title="Toggle dark mode" aria-label="Toggle dark mode">
+          <span class="theme-ico-dark">&#9790;</span><span class="theme-ico-light">&#9728;</span>
+        </button>
+      </div>
+    </header>
+
+    <div class="shell">
+      <aside class="sidebar" id="sidebar" aria-label="Documentation navigation">
+        <nav class="left-nav">
+          <a class="nav-cert" href="../../gh-300/">GH-300 Overview</a>
+<details class="nav-group">
+<summary>Module 1 · Introduction</summary>
+<ul>
+<li><a href="../../gh-300/01-introduction/what-is-github-copilot">What is GitHub Copilot</a></li>
+<li><a href="../../gh-300/01-introduction/ai-assistants-and-history">AI coding assistants &amp; history</a></li>
+<li><a href="../../gh-300/01-introduction/how-copilot-works">How Copilot works</a></li>
+<li><a href="../../gh-300/01-introduction/exam-overview">Exam overview &amp; objectives</a></li>
+</ul></details>
+<details class="nav-group" open>
+<summary>Module 2 · Copilot Fundamentals</summary>
+<ul>
+<li><a href="../../gh-300/02-fundamentals/inline-completion">Inline code completion</a></li>
+<li><a href="../../gh-300/02-fundamentals/copilot-chat">Copilot Chat</a></li>
+<li><a href="../../gh-300/02-fundamentals/edit-and-agent-mode">Edit mode &amp; Agent mode</a></li>
+<li><a href="../../gh-300/02-fundamentals/plan-mode">Plan Mode</a></li>
+<li><a href="../../gh-300/02-fundamentals/agent-sessions-and-subagents">Agent sessions &amp; sub-agents</a></li>
+<li><a href="../../gh-300/02-fundamentals/mcp-and-extensibility">MCP &amp; extensibility</a></li>
+<li><a href="../../gh-300/02-fundamentals/copilot-cli">Copilot in the CLI</a></li>
+<li><a href="../../gh-300/02-fundamentals/context-and-prompt-files">Context &amp; prompt files</a></li>
+<li><a href="../../gh-300/02-fundamentals/custom-instructions">Custom instructions</a></li>
+<li><a href="../../gh-300/02-fundamentals/pull-requests-and-code-review">Pull requests &amp; code review</a></li>
+<li><a href="../../gh-300/02-fundamentals/tests-docs-and-refactoring" class="active">Tests, docs, refactoring &amp; debugging</a></li>
+</ul></details>
+<details class="nav-group">
+<summary>Module 3 · Prompt Engineering</summary>
+<ul>
+<li><a href="../../gh-300/03-prompt-engineering/prompting-principles">Prompting principles</a></li>
+<li><a href="../../gh-300/03-prompt-engineering/prompting-techniques">Prompting techniques</a></li>
+<li><a href="../../gh-300/03-prompt-engineering/context-engineering">Context engineering</a></li>
+<li><a href="../../gh-300/03-prompt-engineering/iteration-and-templates">Iteration &amp; prompt templates</a></li>
+</ul></details>
+<details class="nav-group">
+<summary>Module 4 · Responsible AI</summary>
+<ul>
+<li><a href="../../gh-300/04-responsible-ai/responsible-ai-overview">Responsible AI overview</a></li>
+<li><a href="../../gh-300/04-responsible-ai/security-and-privacy">Security &amp; privacy</a></li>
+<li><a href="../../gh-300/04-responsible-ai/ip-licensing-and-duplication">IP, licensing &amp; duplication</a></li>
+<li><a href="../../gh-300/04-responsible-ai/validation-and-human-review">Validation &amp; human review</a></li>
+</ul></details>
+<details class="nav-group">
+<summary>Module 5 · Enterprise Features</summary>
+<ul>
+<li><a href="../../gh-300/05-enterprise/plans-and-comparison">Plans &amp; feature comparison</a></li>
+<li><a href="../../gh-300/05-enterprise/policies-and-governance">Policies &amp; governance</a></li>
+<li><a href="../../gh-300/05-enterprise/context-indexing-and-knowledge">Context, indexing &amp; knowledge bases</a></li>
+<li><a href="../../gh-300/05-enterprise/spaces-and-spark">Copilot Spaces &amp; Spark</a></li>
+<li><a href="../../gh-300/05-enterprise/rest-api-and-management">Management REST API &amp; audit logs</a></li>
+<li><a href="../../gh-300/05-enterprise/security-and-controls">Security &amp; access controls</a></li>
+</ul></details>
+<details class="nav-group">
+<summary>Module 6 · Developer Productivity</summary>
+<ul>
+<li><a href="../../gh-300/06-productivity/dotnet">.NET 8 &amp; C#</a></li>
+<li><a href="../../gh-300/06-productivity/angular">Angular 18</a></li>
+<li><a href="../../gh-300/06-productivity/azure">Azure</a></li>
+<li><a href="../../gh-300/06-productivity/sql-and-data">SQL Server &amp; data</a></li>
+<li><a href="../../gh-300/06-productivity/git-and-devops">Git &amp; Azure DevOps</a></li>
+</ul></details>
+<details class="nav-group">
+<summary>Module 7 · Cheat Sheets</summary>
+<ul>
+<li><a href="../../gh-300/08-cheat-sheets/prompt-engineering-cheatsheet">Prompt engineering cheat sheet</a></li>
+<li><a href="../../gh-300/08-cheat-sheets/feature-and-plan-comparison">Feature &amp; plan comparison</a></li>
+<li><a href="../../gh-300/08-cheat-sheets/responsible-ai-and-security">Responsible AI &amp; security</a></li>
+<li><a href="../../gh-300/08-cheat-sheets/exam-day-tips">Exam-day tips</a></li>
+</ul></details>
+<div class="nav-section-label">Practice &amp; Tools</div>
+<ul class="nav-tools">
+<li><a href="../../gh-300/dashboard">Study Dashboard</a></li>
+<li><a href="../../gh-300/question-bank">Question Bank</a></li>
+<li><a href="../../gh-300/mock-tests">Mock Exams</a></li>
+<li><a href="../../gh-300/flashcards">Flashcards</a></li>
+<li><a href="../../gh-300/labs">Hands-on Labs</a></li>
+</ul>
+        </nav>
+      </aside>
+      <div class="sidebar-scrim" data-action="toggle-nav"></div>
+
+      <main class="main" id="main">
+        <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="../../">Home</a><span class="sep">/</span><a href="../../gh-300/">GH-300</a><span class="sep">/</span><span>Module 2 · Copilot Fundamentals</span><span class="sep">/</span><span aria-current="page">Tests, docs, refactoring &amp; debugging</span></nav>
+
+        <div class="doc-toolbar">
+          <span class="read-status" data-role="read-status"></span>
+          <div class="doc-toolbar-actions">
+            <label class="mark-read">
+              <input type="checkbox" data-action="mark-read" /> Mark as complete
+            </label>
+          </div>
+        </div>
+
+        <article class="doc" data-role="doc">
+          <header class="doc-head"><div class="eyebrow">Module 2 · Copilot Fundamentals</div><h1>Tests, docs, refactoring &amp; debugging</h1></header>
+<p>Some of Copilot's highest-value everyday tasks are generating tests, writing documentation, refactoring safely, and helping debug. These map to the exam's &quot;developer use cases&quot; and &quot;testing&quot; domains.</p>
+<h2 id="test-generation" tabindex="-1"><a class="header-anchor" href="#test-generation"><span>Test generation</span></a></h2>
+<p>Copilot drafts unit tests from your code and intent — a strong fit for xUnit/NUnit in .NET and Jasmine/Jest in Angular. Ask for specific cases, not just &quot;write tests.&quot;</p>
+<pre><code class="language-text">/tests Generate xUnit tests for OrderService.CalculateTotal covering:
+empty order, single line, tax rounding to 2dp, and a negative quantity guard.
+Use FluentAssertions.
+</code></pre>
+<div class="callout callout-best-practice"><div class="callout-title"><span class="callout-icon" aria-hidden="true">★</span>Best Practice</div><div class="callout-body">
+<p>Prompt for <strong>edge cases and failure modes</strong> explicitly (nulls, empty collections, boundaries, exceptions). Copilot happily writes the happy path; you must direct it to the risky paths.</p>
+</div></div>
+<h2 id="documentation" tabindex="-1"><a class="header-anchor" href="#documentation"><span>Documentation</span></a></h2>
+<p>Copilot generates XML doc comments, README sections, and inline explanations.</p>
+<pre><code class="language-csharp">/// &lt;summary&gt;Calculates the order total including per-line tax.&lt;/summary&gt;
+/// &lt;param name=&quot;order&quot;&gt;The order aggregate; lines must have non-negative quantities.&lt;/param&gt;
+/// &lt;returns&gt;The tax-inclusive total, rounded to 2 decimal places.&lt;/returns&gt;
+</code></pre>
+<h2 id="refactoring" tabindex="-1"><a class="header-anchor" href="#refactoring"><span>Refactoring</span></a></h2>
+<p>Use chat or edit mode to restructure code while preserving behavior: extract methods, introduce patterns, modernise syntax (e.g., to C# 12 or Angular signals).</p>
+<div class="callout callout-best-practice"><div class="callout-title"><span class="callout-icon" aria-hidden="true">★</span>Best Practice</div><div class="callout-body">
+<p>Refactor <strong>behind tests</strong>. Generate/confirm tests first, refactor second, then re-run the suite. This turns &quot;does it still work?&quot; into an automatic check.</p>
+</div></div>
+<h2 id="debugging" tabindex="-1"><a class="header-anchor" href="#debugging"><span>Debugging</span></a></h2>
+<p>Paste an error, stack trace, or failing test into chat and ask for likely causes and fixes. <code>/fix</code> targets the current problem in context.</p>
+<pre><code class="language-text">/fix This xUnit test throws NullReferenceException on _repo.GetAsync.
+Here is the test #selection and the service #file:OrderService.cs.
+</code></pre>
+<h2 id="limitations" tabindex="-1"><a class="header-anchor" href="#limitations"><span>Limitations</span></a></h2>
+<ul>
+<li>Generated tests may assert the <strong>current (possibly buggy) behavior</strong> rather than the correct behavior — you define correctness.</li>
+<li>Refactors can subtly change behavior; only tests catch that reliably.</li>
+<li>Debugging suggestions are hypotheses, not diagnoses.</li>
+</ul>
+<h2 id="common-mistakes" tabindex="-1"><a class="header-anchor" href="#common-mistakes"><span>Common mistakes</span></a></h2>
+<div class="callout callout-mistake"><div class="callout-title"><span class="callout-icon" aria-hidden="true">⚠</span>Common Mistake</div><div class="callout-body">
+<ul>
+<li>Trusting generated tests as proof of correctness. Tests written from the same flawed assumptions can pass while the code is wrong.</li>
+<li>Refactoring without a test safety net and assuming behavior is preserved.</li>
+<li>Accepting a &quot;fix&quot; without confirming it addresses the root cause, not just the symptom.</li>
+</ul>
+</div></div>
+<div class="callout callout-tip"><div class="callout-title"><span class="callout-icon" aria-hidden="true">✓</span>Exam Tip</div><div class="callout-body">
+<p>For the testing domain: Copilot <strong>accelerates</strong> test writing but you must <strong>specify coverage</strong> (edge cases) and <strong>judge correctness</strong>. Passing tests generated by Copilot are not, by themselves, evidence that the code meets requirements.</p>
+</div></div>
+
+        </article>
+
+        <div class="prev-next"><a class="pn prev" href="../../gh-300/02-fundamentals/pull-requests-and-code-review"><span class="pn-dir">Previous</span><span class="pn-title">Pull requests &amp; code review</span></a><a class="pn next" href="../../gh-300/03-prompt-engineering/prompting-principles"><span class="pn-dir">Next</span><span class="pn-title">Prompting principles</span></a></div>
+
+        <footer class="doc-footer">
+          <p class="doc-footer-report">
+            Spotted a mistake on this page?
+            <button type="button" class="linklike" data-action="open-feedback" data-feedback-type="content">Report an issue</button>
+            ·
+            <button type="button" class="linklike" data-action="open-feedback" data-feedback-type="suggest-topic">Suggest a topic</button>
+          </p>
+          <p>&copy; 2026 CertHub · Created by
+            <a href="https://www.linkedin.com/in/sandeepaugustine" target="_blank" rel="noopener noreferrer">Sandeep Augustine</a>
+          </p>
+        </footer>
+      </main>
+
+      <aside class="toc-rail"><nav class="on-this-page" aria-label="On this page"><h4>On this page</h4><ul><li class="toc-2"><a href="#test-generation">Test generation</a></li>
+<li class="toc-2"><a href="#documentation">Documentation</a></li>
+<li class="toc-2"><a href="#refactoring">Refactoring</a></li>
+<li class="toc-2"><a href="#debugging">Debugging</a></li>
+<li class="toc-2"><a href="#limitations">Limitations</a></li>
+<li class="toc-2"><a href="#common-mistakes">Common mistakes</a></li></ul></nav></aside>
+    </div>
+
+    <!-- Search overlay -->
+    <div class="search-overlay" data-role="search-overlay" hidden>
+      <div class="search-box" role="dialog" aria-modal="true" aria-label="Search">
+        <input type="search" class="search-input" data-role="search-input" placeholder="Search all content…" autocomplete="off" />
+        <div class="search-results" data-role="search-results"></div>
+        <div class="search-hint">Press <kbd>Esc</kbd> to close · <kbd>&uarr;</kbd> <kbd>&darr;</kbd> to navigate · <kbd>Enter</kbd> to open</div>
+      </div>
+    </div>
+
+    <script src="../../assets/data/search-index.js"></script>
+    <script src="../../assets/data/content-data.js"></script>
+    <script type="module" src="../../assets/js/lib/feedback.js"></script>
+    <script src="../../assets/js/app.js"></script>
+    
+  </body>
+</html>

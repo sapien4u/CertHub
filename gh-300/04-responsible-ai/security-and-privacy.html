@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Security & privacy · GH-300 · CertHub</title>
+    <meta name="description" content="Security &amp; privacy — study guides, question banks, mock exams, and flashcards on CertHub, the offline-first certification study portal." />
+    <meta name="author" content="Sandeep Augustine" />
+    <meta name="keywords" content="certifications, certification study portal, exam prep, question bank, mock exam, flashcards, GH-300, GitHub Copilot certification, Azure AI certification, responsible AI, prompt engineering" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://sapien4u.github.io/CertHub/gh-300/04-responsible-ai/security-and-privacy" />
+    <meta name="theme-color" content="#0d1526" />
+
+    <link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/icons/favicon-32.png" />
+    <link rel="apple-touch-icon" href="../../assets/icons/apple-touch-icon.png" />
+    <link rel="manifest" href="../../manifest.webmanifest" />
+
+    <!-- Open Graph / social preview -->
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="CertHub" />
+    <meta property="og:title" content="Security &amp; privacy · CertHub" />
+    <meta property="og:description" content="Security &amp; privacy — study guides, question banks, mock exams, and flashcards on CertHub, the offline-first certification study portal." />
+    <meta property="og:url" content="https://sapien4u.github.io/CertHub/gh-300/04-responsible-ai/security-and-privacy" />
+    <meta property="og:image" content="https://sapien4u.github.io/CertHub/assets/social/og-cover.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="CertHub — offline-first certification study portal" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Security &amp; privacy · CertHub" />
+    <meta name="twitter:description" content="Security &amp; privacy — study guides, question banks, mock exams, and flashcards on CertHub, the offline-first certification study portal." />
+    <meta name="twitter:image" content="https://sapien4u.github.io/CertHub/assets/social/og-cover.png" />
+
+    <link rel="stylesheet" href="../../assets/css/styles.css" />
+    <script>
+      // Set theme before paint to avoid a flash of the wrong theme.
+      (function () {
+        try {
+          var t = localStorage.getItem("certhub:theme");
+          if (t) {
+            try { t = JSON.parse(t); } catch (e) {}
+            if (t === "dark" || t === "light")
+              document.documentElement.setAttribute("data-theme", t);
+          }
+        } catch (e) {}
+      })();
+    </script>
+    
+  </head>
+  <body class="" data-page="gh_300_04_responsible_ai_security_and_privacy" data-root="../../" data-url="gh-300/04-responsible-ai/security-and-privacy" data-title="Security & privacy" data-cert="gh-300">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="topbar">
+      <button class="icon-btn nav-toggle" aria-label="Toggle navigation" data-action="toggle-nav">&#9776;</button>
+      <a class="brand" href="../../">
+        <span class="brand-mark">C</span><span class="brand-name">CertHub</span>
+      </a>
+
+      <button class="search-trigger" data-action="open-search" aria-label="Search">
+        <span class="search-ico">&#128269;</span>
+        <span class="search-label">Search content</span>
+        <span class="search-kbd">Ctrl K</span>
+      </button>
+
+      <div class="topbar-actions">
+        <button class="icon-btn" data-action="toggle-bookmark" title="Bookmark this page" aria-label="Bookmark this page">&#9734;</button>
+        <button class="icon-btn" data-action="print" title="Print this page" aria-label="Print this page">&#128424;</button>
+        <button class="icon-btn theme-btn" data-action="toggle-theme" title="Toggle dark mode" aria-label="Toggle dark mode">
+          <span class="theme-ico-dark">&#9790;</span><span class="theme-ico-light">&#9728;</span>
+        </button>
+      </div>
+    </header>
+
+    <div class="shell">
+      <aside class="sidebar" id="sidebar" aria-label="Documentation navigation">
+        <nav class="left-nav">
+          <a class="nav-cert" href="../../gh-300/">GH-300 Overview</a>
+<details class="nav-group">
+<summary>Module 1 · Introduction</summary>
+<ul>
+<li><a href="../../gh-300/01-introduction/what-is-github-copilot">What is GitHub Copilot</a></li>
+<li><a href="../../gh-300/01-introduction/ai-assistants-and-history">AI coding assistants &amp; history</a></li>
+<li><a href="../../gh-300/01-introduction/how-copilot-works">How Copilot works</a></li>
+<li><a href="../../gh-300/01-introduction/exam-overview">Exam overview &amp; objectives</a></li>
+</ul></details>
+<details class="nav-group">
+<summary>Module 2 · Copilot Fundamentals</summary>
+<ul>
+<li><a href="../../gh-300/02-fundamentals/inline-completion">Inline code completion</a></li>
+<li><a href="../../gh-300/02-fundamentals/copilot-chat">Copilot Chat</a></li>
+<li><a href="../../gh-300/02-fundamentals/edit-and-agent-mode">Edit mode &amp; Agent mode</a></li>
+<li><a href="../../gh-300/02-fundamentals/plan-mode">Plan Mode</a></li>
+<li><a href="../../gh-300/02-fundamentals/agent-sessions-and-subagents">Agent sessions &amp; sub-agents</a></li>
+<li><a href="../../gh-300/02-fundamentals/mcp-and-extensibility">MCP &amp; extensibility</a></li>
+<li><a href="../../gh-300/02-fundamentals/copilot-cli">Copilot in the CLI</a></li>
+<li><a href="../../gh-300/02-fundamentals/context-and-prompt-files">Context &amp; prompt files</a></li>
+<li><a href="../../gh-300/02-fundamentals/custom-instructions">Custom instructions</a></li>
+<li><a href="../../gh-300/02-fundamentals/pull-requests-and-code-review">Pull requests &amp; code review</a></li>
+<li><a href="../../gh-300/02-fundamentals/tests-docs-and-refactoring">Tests, docs, refactoring &amp; debugging</a></li>
+</ul></details>
+<details class="nav-group">
+<summary>Module 3 · Prompt Engineering</summary>
+<ul>
+<li><a href="../../gh-300/03-prompt-engineering/prompting-principles">Prompting principles</a></li>
+<li><a href="../../gh-300/03-prompt-engineering/prompting-techniques">Prompting techniques</a></li>
+<li><a href="../../gh-300/03-prompt-engineering/context-engineering">Context engineering</a></li>
+<li><a href="../../gh-300/03-prompt-engineering/iteration-and-templates">Iteration &amp; prompt templates</a></li>
+</ul></details>
+<details class="nav-group" open>
+<summary>Module 4 · Responsible AI</summary>
+<ul>
+<li><a href="../../gh-300/04-responsible-ai/responsible-ai-overview">Responsible AI overview</a></li>
+<li><a href="../../gh-300/04-responsible-ai/security-and-privacy" class="active">Security &amp; privacy</a></li>
+<li><a href="../../gh-300/04-responsible-ai/ip-licensing-and-duplication">IP, licensing &amp; duplication</a></li>
+<li><a href="../../gh-300/04-responsible-ai/validation-and-human-review">Validation &amp; human review</a></li>
+</ul></details>
+<details class="nav-group">
+<summary>Module 5 · Enterprise Features</summary>
+<ul>
+<li><a href="../../gh-300/05-enterprise/plans-and-comparison">Plans &amp; feature comparison</a></li>
+<li><a href="../../gh-300/05-enterprise/policies-and-governance">Policies &amp; governance</a></li>
+<li><a href="../../gh-300/05-enterprise/context-indexing-and-knowledge">Context, indexing &amp; knowledge bases</a></li>
+<li><a href="../../gh-300/05-enterprise/spaces-and-spark">Copilot Spaces &amp; Spark</a></li>
+<li><a href="../../gh-300/05-enterprise/rest-api-and-management">Management REST API &amp; audit logs</a></li>
+<li><a href="../../gh-300/05-enterprise/security-and-controls">Security &amp; access controls</a></li>
+</ul></details>
+<details class="nav-group">
+<summary>Module 6 · Developer Productivity</summary>
+<ul>
+<li><a href="../../gh-300/06-productivity/dotnet">.NET 8 &amp; C#</a></li>
+<li><a href="../../gh-300/06-productivity/angular">Angular 18</a></li>
+<li><a href="../../gh-300/06-productivity/azure">Azure</a></li>
+<li><a href="../../gh-300/06-productivity/sql-and-data">SQL Server &amp; data</a></li>
+<li><a href="../../gh-300/06-productivity/git-and-devops">Git &amp; Azure DevOps</a></li>
+</ul></details>
+<details class="nav-group">
+<summary>Module 7 · Cheat Sheets</summary>
+<ul>
+<li><a href="../../gh-300/08-cheat-sheets/prompt-engineering-cheatsheet">Prompt engineering cheat sheet</a></li>
+<li><a href="../../gh-300/08-cheat-sheets/feature-and-plan-comparison">Feature &amp; plan comparison</a></li>
+<li><a href="../../gh-300/08-cheat-sheets/responsible-ai-and-security">Responsible AI &amp; security</a></li>
+<li><a href="../../gh-300/08-cheat-sheets/exam-day-tips">Exam-day tips</a></li>
+</ul></details>
+<div class="nav-section-label">Practice &amp; Tools</div>
+<ul class="nav-tools">
+<li><a href="../../gh-300/dashboard">Study Dashboard</a></li>
+<li><a href="../../gh-300/question-bank">Question Bank</a></li>
+<li><a href="../../gh-300/mock-tests">Mock Exams</a></li>
+<li><a href="../../gh-300/flashcards">Flashcards</a></li>
+<li><a href="../../gh-300/labs">Hands-on Labs</a></li>
+</ul>
+        </nav>
+      </aside>
+      <div class="sidebar-scrim" data-action="toggle-nav"></div>
+
+      <main class="main" id="main">
+        <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="../../">Home</a><span class="sep">/</span><a href="../../gh-300/">GH-300</a><span class="sep">/</span><span>Module 4 · Responsible AI</span><span class="sep">/</span><span aria-current="page">Security &amp; privacy</span></nav>
+
+        <div class="doc-toolbar">
+          <span class="read-status" data-role="read-status"></span>
+          <div class="doc-toolbar-actions">
+            <label class="mark-read">
+              <input type="checkbox" data-action="mark-read" /> Mark as complete
+            </label>
+          </div>
+        </div>
+
+        <article class="doc" data-role="doc">
+          <header class="doc-head"><div class="eyebrow">Module 4 · Responsible AI</div><h1>Security &amp; privacy</h1></header>
+<p>Copilot can accelerate secure development — and, if used carelessly, introduce risk. This page covers secure-coding responsibilities, prompt-injection awareness, and how Copilot handles your data.</p>
+<h2 id="generated-code-is-not-pre-vetted" tabindex="-1"><a class="header-anchor" href="#generated-code-is-not-pre-vetted"><span>Generated code is not pre-vetted</span></a></h2>
+<p>Suggestions can contain vulnerabilities learned from public code: injection flaws, weak crypto, missing authorization, hard-coded secrets. You own the security review.</p>
+<pre><code class="language-csharp">// Risky: string-concatenated SQL Copilot might suggest
+var sql = $&quot;SELECT * FROM Users WHERE Name = '{name}'&quot;; // SQL injection
+
+// Secure: parameterised query
+var user = await _db.Users.FirstOrDefaultAsync(u =&gt; u.Name == name);
+</code></pre>
+<div class="callout callout-best-practice"><div class="callout-title"><span class="callout-icon" aria-hidden="true">★</span>Best Practice</div><div class="callout-body">
+<p>Keep the <strong>OWASP Top 10</strong> in mind when reviewing generated code: injection, broken access control, cryptographic failures, SSRF, and friends. Route Copilot output through the same SAST, dependency, and secret scanning as any code.</p>
+</div></div>
+<h2 id="dont-leak-secrets-or-sensitive-data" tabindex="-1"><a class="header-anchor" href="#dont-leak-secrets-or-sensitive-data"><span>Don't leak secrets or sensitive data</span></a></h2>
+<ul>
+<li>Never paste secrets, tokens, customer PII, or proprietary data into prompts unnecessarily.</li>
+<li>Use <strong>content exclusions</strong> to keep sensitive files out of Copilot's context.</li>
+<li>Read secrets from a vault (e.g., <strong>Azure Key Vault</strong>), never hard-code them — and don't let a suggestion talk you into it.</li>
+</ul>
+<h2 id="prompt-injection-awareness" tabindex="-1"><a class="header-anchor" href="#prompt-injection-awareness"><span>Prompt-injection awareness</span></a></h2>
+<p><strong>Prompt injection</strong> is when untrusted content (a file, web page, issue, or dependency) contains instructions that try to manipulate the AI's behavior. As Copilot gains context from more sources (agents, web, repos), treat external content as <strong>data, not commands</strong>, and review actions an agent proposes.</p>
+<div class="callout callout-mistake"><div class="callout-title"><span class="callout-icon" aria-hidden="true">⚠</span>Common Mistake</div><div class="callout-body">
+<p>Assuming text pulled into context is trustworthy. Malicious instructions embedded in a document or repo can attempt to steer generation. Review agent actions and generated code regardless of source.</p>
+</div></div>
+<h2 id="how-copilot-handles-data-fundamentals" tabindex="-1"><a class="header-anchor" href="#how-copilot-handles-data-fundamentals"><span>How Copilot handles data (fundamentals)</span></a></h2>
+<ul>
+<li><strong>Business and Enterprise</strong>: prompts and suggestions are <strong>not used to train the foundation models</strong>, and code snippets are not retained to train models. Business/Enterprise are built for organizational data protection.</li>
+<li><strong>Content exclusions</strong> let admins prevent specified files/paths from being used as context.</li>
+<li><strong>Duplication filter</strong> can block suggestions matching public code.</li>
+<li>Telemetry and data-handling specifics differ by plan; Business/Enterprise offer stronger guarantees and admin controls than the individual free tier.</li>
+</ul>
+<div class="callout callout-tip"><div class="callout-title"><span class="callout-icon" aria-hidden="true">✓</span>Exam Tip</div><div class="callout-body">
+<p>Key privacy facts for the exam: with <strong>Copilot Business/Enterprise</strong>, your code/prompts are <strong>not used to train the models</strong>; <strong>content exclusions</strong> control what Copilot can see; and the <strong>matching-public-code filter</strong> controls what it can suggest.</p>
+</div></div>
+
+        </article>
+
+        <div class="prev-next"><a class="pn prev" href="../../gh-300/04-responsible-ai/responsible-ai-overview"><span class="pn-dir">Previous</span><span class="pn-title">Responsible AI overview</span></a><a class="pn next" href="../../gh-300/04-responsible-ai/ip-licensing-and-duplication"><span class="pn-dir">Next</span><span class="pn-title">IP, licensing &amp; duplication</span></a></div>
+
+        <footer class="doc-footer">
+          <p class="doc-footer-report">
+            Spotted a mistake on this page?
+            <button type="button" class="linklike" data-action="open-feedback" data-feedback-type="content">Report an issue</button>
+            ·
+            <button type="button" class="linklike" data-action="open-feedback" data-feedback-type="suggest-topic">Suggest a topic</button>
+          </p>
+          <p>&copy; 2026 CertHub · Created by
+            <a href="https://www.linkedin.com/in/sandeepaugustine" target="_blank" rel="noopener noreferrer">Sandeep Augustine</a>
+          </p>
+        </footer>
+      </main>
+
+      <aside class="toc-rail"><nav class="on-this-page" aria-label="On this page"><h4>On this page</h4><ul><li class="toc-2"><a href="#generated-code-is-not-pre-vetted">Generated code is not pre-vetted</a></li>
+<li class="toc-2"><a href="#dont-leak-secrets-or-sensitive-data">Don't leak secrets or sensitive data</a></li>
+<li class="toc-2"><a href="#prompt-injection-awareness">Prompt-injection awareness</a></li>
+<li class="toc-2"><a href="#how-copilot-handles-data-fundamentals">How Copilot handles data (fundamentals)</a></li></ul></nav></aside>
+    </div>
+
+    <!-- Search overlay -->
+    <div class="search-overlay" data-role="search-overlay" hidden>
+      <div class="search-box" role="dialog" aria-modal="true" aria-label="Search">
+        <input type="search" class="search-input" data-role="search-input" placeholder="Search all content…" autocomplete="off" />
+        <div class="search-results" data-role="search-results"></div>
+        <div class="search-hint">Press <kbd>Esc</kbd> to close · <kbd>&uarr;</kbd> <kbd>&darr;</kbd> to navigate · <kbd>Enter</kbd> to open</div>
+      </div>
+    </div>
+
+    <script src="../../assets/data/search-index.js"></script>
+    <script src="../../assets/data/content-data.js"></script>
+    <script type="module" src="../../assets/js/lib/feedback.js"></script>
+    <script src="../../assets/js/app.js"></script>
+    
+  </body>
+</html>

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prompt engineering cheat sheet · GH-300 · CertHub</title>
+    <meta name="description" content="Prompt engineering cheat sheet — study guides, question banks, mock exams, and flashcards on CertHub, the offline-first certification study portal." />
+    <meta name="author" content="Sandeep Augustine" />
+    <meta name="keywords" content="certifications, certification study portal, exam prep, question bank, mock exam, flashcards, GH-300, GitHub Copilot certification, Azure AI certification, responsible AI, prompt engineering" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://sapien4u.github.io/CertHub/gh-300/08-cheat-sheets/prompt-engineering-cheatsheet" />
+    <meta name="theme-color" content="#0d1526" />
+
+    <link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/icons/favicon-32.png" />
+    <link rel="apple-touch-icon" href="../../assets/icons/apple-touch-icon.png" />
+    <link rel="manifest" href="../../manifest.webmanifest" />
+
+    <!-- Open Graph / social preview -->
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="CertHub" />
+    <meta property="og:title" content="Prompt engineering cheat sheet · CertHub" />
+    <meta property="og:description" content="Prompt engineering cheat sheet — study guides, question banks, mock exams, and flashcards on CertHub, the offline-first certification study portal." />
+    <meta property="og:url" content="https://sapien4u.github.io/CertHub/gh-300/08-cheat-sheets/prompt-engineering-cheatsheet" />
+    <meta property="og:image" content="https://sapien4u.github.io/CertHub/assets/social/og-cover.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="CertHub — offline-first certification study portal" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Prompt engineering cheat sheet · CertHub" />
+    <meta name="twitter:description" content="Prompt engineering cheat sheet — study guides, question banks, mock exams, and flashcards on CertHub, the offline-first certification study portal." />
+    <meta name="twitter:image" content="https://sapien4u.github.io/CertHub/assets/social/og-cover.png" />
+
+    <link rel="stylesheet" href="../../assets/css/styles.css" />
+    <script>
+      // Set theme before paint to avoid a flash of the wrong theme.
+      (function () {
+        try {
+          var t = localStorage.getItem("certhub:theme");
+          if (t) {
+            try { t = JSON.parse(t); } catch (e) {}
+            if (t === "dark" || t === "light")
+              document.documentElement.setAttribute("data-theme", t);
+          }
+        } catch (e) {}
+      })();
+    </script>
+    
+  </head>
+  <body class="" data-page="gh_300_08_cheat_sheets_prompt_engineering_cheatsheet" data-root="../../" data-url="gh-300/08-cheat-sheets/prompt-engineering-cheatsheet" data-title="Prompt engineering cheat sheet" data-cert="gh-300">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="topbar">
+      <button class="icon-btn nav-toggle" aria-label="Toggle navigation" data-action="toggle-nav">&#9776;</button>
+      <a class="brand" href="../../">
+        <span class="brand-mark">C</span><span class="brand-name">CertHub</span>
+      </a>
+
+      <button class="search-trigger" data-action="open-search" aria-label="Search">
+        <span class="search-ico">&#128269;</span>
+        <span class="search-label">Search content</span>
+        <span class="search-kbd">Ctrl K</span>
+      </button>
+
+      <div class="topbar-actions">
+        <button class="icon-btn" data-action="toggle-bookmark" title="Bookmark this page" aria-label="Bookmark this page">&#9734;</button>
+        <button class="icon-btn" data-action="print" title="Print this page" aria-label="Print this page">&#128424;</button>
+        <button class="icon-btn theme-btn" data-action="toggle-theme" title="Toggle dark mode" aria-label="Toggle dark mode">
+          <span class="theme-ico-dark">&#9790;</span><span class="theme-ico-light">&#9728;</span>
+        </button>
+      </div>
+    </header>
+
+    <div class="shell">
+      <aside class="sidebar" id="sidebar" aria-label="Documentation navigation">
+        <nav class="left-nav">
+          <a class="nav-cert" href="../../gh-300/">GH-300 Overview</a>
+<details class="nav-group">
+<summary>Module 1 · Introduction</summary>
+<ul>
+<li><a href="../../gh-300/01-introduction/what-is-github-copilot">What is GitHub Copilot</a></li>
+<li><a href="../../gh-300/01-introduction/ai-assistants-and-history">AI coding assistants &amp; history</a></li>
+<li><a href="../../gh-300/01-introduction/how-copilot-works">How Copilot works</a></li>
+<li><a href="../../gh-300/01-introduction/exam-overview">Exam overview &amp; objectives</a></li>
+</ul></details>
+<details class="nav-group">
+<summary>Module 2 · Copilot Fundamentals</summary>
+<ul>
+<li><a href="../../gh-300/02-fundamentals/inline-completion">Inline code completion</a></li>
+<li><a href="../../gh-300/02-fundamentals/copilot-chat">Copilot Chat</a></li>
+<li><a href="../../gh-300/02-fundamentals/edit-and-agent-mode">Edit mode &amp; Agent mode</a></li>
+<li><a href="../../gh-300/02-fundamentals/plan-mode">Plan Mode</a></li>
+<li><a href="../../gh-300/02-fundamentals/agent-sessions-and-subagents">Agent sessions &amp; sub-agents</a></li>
+<li><a href="../../gh-300/02-fundamentals/mcp-and-extensibility">MCP &amp; extensibility</a></li>
+<li><a href="../../gh-300/02-fundamentals/copilot-cli">Copilot in the CLI</a></li>
+<li><a href="../../gh-300/02-fundamentals/context-and-prompt-files">Context &amp; prompt files</a></li>
+<li><a href="../../gh-300/02-fundamentals/custom-instructions">Custom instructions</a></li>
+<li><a href="../../gh-300/02-fundamentals/pull-requests-and-code-review">Pull requests &amp; code review</a></li>
+<li><a href="../../gh-300/02-fundamentals/tests-docs-and-refactoring">Tests, docs, refactoring &amp; debugging</a></li>
+</ul></details>
+<details class="nav-group">
+<summary>Module 3 · Prompt Engineering</summary>
+<ul>
+<li><a href="../../gh-300/03-prompt-engineering/prompting-principles">Prompting principles</a></li>
+<li><a href="../../gh-300/03-prompt-engineering/prompting-techniques">Prompting techniques</a></li>
+<li><a href="../../gh-300/03-prompt-engineering/context-engineering">Context engineering</a></li>
+<li><a href="../../gh-300/03-prompt-engineering/iteration-and-templates">Iteration &amp; prompt templates</a></li>
+</ul></details>
+<details class="nav-group">
+<summary>Module 4 · Responsible AI</summary>
+<ul>
+<li><a href="../../gh-300/04-responsible-ai/responsible-ai-overview">Responsible AI overview</a></li>
+<li><a href="../../gh-300/04-responsible-ai/security-and-privacy">Security &amp; privacy</a></li>
+<li><a href="../../gh-300/04-responsible-ai/ip-licensing-and-duplication">IP, licensing &amp; duplication</a></li>
+<li><a href="../../gh-300/04-responsible-ai/validation-and-human-review">Validation &amp; human review</a></li>
+</ul></details>
+<details class="nav-group">
+<summary>Module 5 · Enterprise Features</summary>
+<ul>
+<li><a href="../../gh-300/05-enterprise/plans-and-comparison">Plans &amp; feature comparison</a></li>
+<li><a href="../../gh-300/05-enterprise/policies-and-governance">Policies &amp; governance</a></li>
+<li><a href="../../gh-300/05-enterprise/context-indexing-and-knowledge">Context, indexing &amp; knowledge bases</a></li>
+<li><a href="../../gh-300/05-enterprise/spaces-and-spark">Copilot Spaces &amp; Spark</a></li>
+<li><a href="../../gh-300/05-enterprise/rest-api-and-management">Management REST API &amp; audit logs</a></li>
+<li><a href="../../gh-300/05-enterprise/security-and-controls">Security &amp; access controls</a></li>
+</ul></details>
+<details class="nav-group">
+<summary>Module 6 · Developer Productivity</summary>
+<ul>
+<li><a href="../../gh-300/06-productivity/dotnet">.NET 8 &amp; C#</a></li>
+<li><a href="../../gh-300/06-productivity/angular">Angular 18</a></li>
+<li><a href="../../gh-300/06-productivity/azure">Azure</a></li>
+<li><a href="../../gh-300/06-productivity/sql-and-data">SQL Server &amp; data</a></li>
+<li><a href="../../gh-300/06-productivity/git-and-devops">Git &amp; Azure DevOps</a></li>
+</ul></details>
+<details class="nav-group" open>
+<summary>Module 7 · Cheat Sheets</summary>
+<ul>
+<li><a href="../../gh-300/08-cheat-sheets/prompt-engineering-cheatsheet" class="active">Prompt engineering cheat sheet</a></li>
+<li><a href="../../gh-300/08-cheat-sheets/feature-and-plan-comparison">Feature &amp; plan comparison</a></li>
+<li><a href="../../gh-300/08-cheat-sheets/responsible-ai-and-security">Responsible AI &amp; security</a></li>
+<li><a href="../../gh-300/08-cheat-sheets/exam-day-tips">Exam-day tips</a></li>
+</ul></details>
+<div class="nav-section-label">Practice &amp; Tools</div>
+<ul class="nav-tools">
+<li><a href="../../gh-300/dashboard">Study Dashboard</a></li>
+<li><a href="../../gh-300/question-bank">Question Bank</a></li>
+<li><a href="../../gh-300/mock-tests">Mock Exams</a></li>
+<li><a href="../../gh-300/flashcards">Flashcards</a></li>
+<li><a href="../../gh-300/labs">Hands-on Labs</a></li>
+</ul>
+        </nav>
+      </aside>
+      <div class="sidebar-scrim" data-action="toggle-nav"></div>
+
+      <main class="main" id="main">
+        <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="../../">Home</a><span class="sep">/</span><a href="../../gh-300/">GH-300</a><span class="sep">/</span><span>Module 7 · Cheat Sheets</span><span class="sep">/</span><span aria-current="page">Prompt engineering cheat sheet</span></nav>
+
+        <div class="doc-toolbar">
+          <span class="read-status" data-role="read-status"></span>
+          <div class="doc-toolbar-actions">
+            <label class="mark-read">
+              <input type="checkbox" data-action="mark-read" /> Mark as complete
+            </label>
+          </div>
+        </div>
+
+        <article class="doc" data-role="doc">
+          <header class="doc-head"><div class="eyebrow">Module 7 · Cheat Sheets</div><h1>Prompt engineering cheat sheet</h1></header>
+<p>A one-page reference. Print-friendly (use the print button).</p>
+<h2 id="the-prompt-formula" tabindex="-1"><a class="header-anchor" href="#the-prompt-formula"><span>The prompt formula</span></a></h2>
+<blockquote>
+<p><strong>Goal + Context + Constraints + Format</strong></p>
+</blockquote>
+<ul>
+<li><strong>Goal</strong> — what to produce.</li>
+<li><strong>Context</strong> — relevant types/files (reference, don't paste).</li>
+<li><strong>Constraints</strong> — versions, patterns, security, performance.</li>
+<li><strong>Format</strong> — the exact output shape.</li>
+</ul>
+<h2 id="techniques" tabindex="-1"><a class="header-anchor" href="#techniques"><span>Techniques</span></a></h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Technique</th>
+<th>Use when</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Zero-shot</td>
+<td>Common, well-understood task</td>
+</tr>
+<tr>
+<td>Few-shot</td>
+<td>Output must match a specific style/format</td>
+</tr>
+<tr>
+<td>Step-by-step</td>
+<td>Complex logic or debugging</td>
+</tr>
+<tr>
+<td>Decomposition</td>
+<td>Large task → smaller reviewed steps</td>
+</tr>
+<tr>
+<td>Role framing</td>
+<td>Focused lens (security, performance)</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="context-levers" tabindex="-1"><a class="header-anchor" href="#context-levers"><span>Context levers</span></a></h2>
+<ul>
+<li>Open the <strong>defining files</strong>; keep a <strong>reference implementation</strong> visible.</li>
+<li>Reference with <code>#file</code>, <code>#selection</code>, <code>@workspace</code>.</li>
+<li>Cut noise; <strong>relevance beats volume</strong>.</li>
+<li>Put standing rules in <strong>custom instructions</strong>; reusable prompts in <strong>prompt files</strong>.</li>
+</ul>
+<h2 id="chat-quick-reference" tabindex="-1"><a class="header-anchor" href="#chat-quick-reference"><span>Chat quick reference</span></a></h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Kind</th>
+<th>Examples</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Slash commands</td>
+<td><code>/explain</code> <code>/fix</code> <code>/tests</code> <code>/doc</code> <code>/optimize</code></td>
+</tr>
+<tr>
+<td>Participants</td>
+<td><code>@workspace</code> <code>@terminal</code> <code>@vscode</code></td>
+</tr>
+<tr>
+<td>Variables</td>
+<td><code>#file</code> <code>#selection</code> <code>#editor</code></td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="good-vs-poor" tabindex="-1"><a class="header-anchor" href="#good-vs-poor"><span>Good vs poor</span></a></h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Poor</th>
+<th>Better</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&quot;fix this&quot;</td>
+<td>&quot;guards null <code>order.Lines</code>, add a test&quot;</td>
+</tr>
+<tr>
+<td>&quot;make it faster&quot;</td>
+<td>&quot;remove N+1; single EF query&quot;</td>
+</tr>
+<tr>
+<td>&quot;write tests&quot;</td>
+<td>&quot;xUnit: empty, boundary, negative cases&quot;</td>
+</tr>
+</tbody>
+</table></div>
+<div class="callout callout-best-practice"><div class="callout-title"><span class="callout-icon" aria-hidden="true">★</span>Best Practice</div><div class="callout-body">
+<p>Front-load the most important constraint, iterate rather than restart, and always read/verify the output.</p>
+</div></div>
+
+        </article>
+
+        <div class="prev-next"><a class="pn prev" href="../../gh-300/06-productivity/git-and-devops"><span class="pn-dir">Previous</span><span class="pn-title">Git &amp; Azure DevOps</span></a><a class="pn next" href="../../gh-300/08-cheat-sheets/feature-and-plan-comparison"><span class="pn-dir">Next</span><span class="pn-title">Feature &amp; plan comparison</span></a></div>
+
+        <footer class="doc-footer">
+          <p class="doc-footer-report">
+            Spotted a mistake on this page?
+            <button type="button" class="linklike" data-action="open-feedback" data-feedback-type="content">Report an issue</button>
+            ·
+            <button type="button" class="linklike" data-action="open-feedback" data-feedback-type="suggest-topic">Suggest a topic</button>
+          </p>
+          <p>&copy; 2026 CertHub · Created by
+            <a href="https://www.linkedin.com/in/sandeepaugustine" target="_blank" rel="noopener noreferrer">Sandeep Augustine</a>
+          </p>
+        </footer>
+      </main>
+
+      <aside class="toc-rail"><nav class="on-this-page" aria-label="On this page"><h4>On this page</h4><ul><li class="toc-2"><a href="#the-prompt-formula">The prompt formula</a></li>
+<li class="toc-2"><a href="#techniques">Techniques</a></li>
+<li class="toc-2"><a href="#context-levers">Context levers</a></li>
+<li class="toc-2"><a href="#chat-quick-reference">Chat quick reference</a></li>
+<li class="toc-2"><a href="#good-vs-poor">Good vs poor</a></li></ul></nav></aside>
+    </div>
+
+    <!-- Search overlay -->
+    <div class="search-overlay" data-role="search-overlay" hidden>
+      <div class="search-box" role="dialog" aria-modal="true" aria-label="Search">
+        <input type="search" class="search-input" data-role="search-input" placeholder="Search all content…" autocomplete="off" />
+        <div class="search-results" data-role="search-results"></div>
+        <div class="search-hint">Press <kbd>Esc</kbd> to close · <kbd>&uarr;</kbd> <kbd>&darr;</kbd> to navigate · <kbd>Enter</kbd> to open</div>
+      </div>
+    </div>
+
+    <script src="../../assets/data/search-index.js"></script>
+    <script src="../../assets/data/content-data.js"></script>
+    <script type="module" src="../../assets/js/lib/feedback.js"></script>
+    <script src="../../assets/js/app.js"></script>
+    
+  </body>
+</html>

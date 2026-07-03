@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SQL Server & data · GH-300 · CertHub</title>
+    <meta name="description" content="SQL Server &amp; data — study guides, question banks, mock exams, and flashcards on CertHub, the offline-first certification study portal." />
+    <meta name="author" content="Sandeep Augustine" />
+    <meta name="keywords" content="certifications, certification study portal, exam prep, question bank, mock exam, flashcards, GH-300, GitHub Copilot certification, Azure AI certification, responsible AI, prompt engineering" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://sapien4u.github.io/CertHub/gh-300/06-productivity/sql-and-data" />
+    <meta name="theme-color" content="#0d1526" />
+
+    <link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/icons/favicon-32.png" />
+    <link rel="apple-touch-icon" href="../../assets/icons/apple-touch-icon.png" />
+    <link rel="manifest" href="../../manifest.webmanifest" />
+
+    <!-- Open Graph / social preview -->
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="CertHub" />
+    <meta property="og:title" content="SQL Server &amp; data · CertHub" />
+    <meta property="og:description" content="SQL Server &amp; data — study guides, question banks, mock exams, and flashcards on CertHub, the offline-first certification study portal." />
+    <meta property="og:url" content="https://sapien4u.github.io/CertHub/gh-300/06-productivity/sql-and-data" />
+    <meta property="og:image" content="https://sapien4u.github.io/CertHub/assets/social/og-cover.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="CertHub — offline-first certification study portal" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="SQL Server &amp; data · CertHub" />
+    <meta name="twitter:description" content="SQL Server &amp; data — study guides, question banks, mock exams, and flashcards on CertHub, the offline-first certification study portal." />
+    <meta name="twitter:image" content="https://sapien4u.github.io/CertHub/assets/social/og-cover.png" />
+
+    <link rel="stylesheet" href="../../assets/css/styles.css" />
+    <script>
+      // Set theme before paint to avoid a flash of the wrong theme.
+      (function () {
+        try {
+          var t = localStorage.getItem("certhub:theme");
+          if (t) {
+            try { t = JSON.parse(t); } catch (e) {}
+            if (t === "dark" || t === "light")
+              document.documentElement.setAttribute("data-theme", t);
+          }
+        } catch (e) {}
+      })();
+    </script>
+    
+  </head>
+  <body class="" data-page="gh_300_06_productivity_sql_and_data" data-root="../../" data-url="gh-300/06-productivity/sql-and-data" data-title="SQL Server & data" data-cert="gh-300">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="topbar">
+      <button class="icon-btn nav-toggle" aria-label="Toggle navigation" data-action="toggle-nav">&#9776;</button>
+      <a class="brand" href="../../">
+        <span class="brand-mark">C</span><span class="brand-name">CertHub</span>
+      </a>
+
+      <button class="search-trigger" data-action="open-search" aria-label="Search">
+        <span class="search-ico">&#128269;</span>
+        <span class="search-label">Search content</span>
+        <span class="search-kbd">Ctrl K</span>
+      </button>
+
+      <div class="topbar-actions">
+        <button class="icon-btn" data-action="toggle-bookmark" title="Bookmark this page" aria-label="Bookmark this page">&#9734;</button>
+        <button class="icon-btn" data-action="print" title="Print this page" aria-label="Print this page">&#128424;</button>
+        <button class="icon-btn theme-btn" data-action="toggle-theme" title="Toggle dark mode" aria-label="Toggle dark mode">
+          <span class="theme-ico-dark">&#9790;</span><span class="theme-ico-light">&#9728;</span>
+        </button>
+      </div>
+    </header>
+
+    <div class="shell">
+      <aside class="sidebar" id="sidebar" aria-label="Documentation navigation">
+        <nav class="left-nav">
+          <a class="nav-cert" href="../../gh-300/">GH-300 Overview</a>
+<details class="nav-group">
+<summary>Module 1 · Introduction</summary>
+<ul>
+<li><a href="../../gh-300/01-introduction/what-is-github-copilot">What is GitHub Copilot</a></li>
+<li><a href="../../gh-300/01-introduction/ai-assistants-and-history">AI coding assistants &amp; history</a></li>
+<li><a href="../../gh-300/01-introduction/how-copilot-works">How Copilot works</a></li>
+<li><a href="../../gh-300/01-introduction/exam-overview">Exam overview &amp; objectives</a></li>
+</ul></details>
+<details class="nav-group">
+<summary>Module 2 · Copilot Fundamentals</summary>
+<ul>
+<li><a href="../../gh-300/02-fundamentals/inline-completion">Inline code completion</a></li>
+<li><a href="../../gh-300/02-fundamentals/copilot-chat">Copilot Chat</a></li>
+<li><a href="../../gh-300/02-fundamentals/edit-and-agent-mode">Edit mode &amp; Agent mode</a></li>
+<li><a href="../../gh-300/02-fundamentals/plan-mode">Plan Mode</a></li>
+<li><a href="../../gh-300/02-fundamentals/agent-sessions-and-subagents">Agent sessions &amp; sub-agents</a></li>
+<li><a href="../../gh-300/02-fundamentals/mcp-and-extensibility">MCP &amp; extensibility</a></li>
+<li><a href="../../gh-300/02-fundamentals/copilot-cli">Copilot in the CLI</a></li>
+<li><a href="../../gh-300/02-fundamentals/context-and-prompt-files">Context &amp; prompt files</a></li>
+<li><a href="../../gh-300/02-fundamentals/custom-instructions">Custom instructions</a></li>
+<li><a href="../../gh-300/02-fundamentals/pull-requests-and-code-review">Pull requests &amp; code review</a></li>
+<li><a href="../../gh-300/02-fundamentals/tests-docs-and-refactoring">Tests, docs, refactoring &amp; debugging</a></li>
+</ul></details>
+<details class="nav-group">
+<summary>Module 3 · Prompt Engineering</summary>
+<ul>
+<li><a href="../../gh-300/03-prompt-engineering/prompting-principles">Prompting principles</a></li>
+<li><a href="../../gh-300/03-prompt-engineering/prompting-techniques">Prompting techniques</a></li>
+<li><a href="../../gh-300/03-prompt-engineering/context-engineering">Context engineering</a></li>
+<li><a href="../../gh-300/03-prompt-engineering/iteration-and-templates">Iteration &amp; prompt templates</a></li>
+</ul></details>
+<details class="nav-group">
+<summary>Module 4 · Responsible AI</summary>
+<ul>
+<li><a href="../../gh-300/04-responsible-ai/responsible-ai-overview">Responsible AI overview</a></li>
+<li><a href="../../gh-300/04-responsible-ai/security-and-privacy">Security &amp; privacy</a></li>
+<li><a href="../../gh-300/04-responsible-ai/ip-licensing-and-duplication">IP, licensing &amp; duplication</a></li>
+<li><a href="../../gh-300/04-responsible-ai/validation-and-human-review">Validation &amp; human review</a></li>
+</ul></details>
+<details class="nav-group">
+<summary>Module 5 · Enterprise Features</summary>
+<ul>
+<li><a href="../../gh-300/05-enterprise/plans-and-comparison">Plans &amp; feature comparison</a></li>
+<li><a href="../../gh-300/05-enterprise/policies-and-governance">Policies &amp; governance</a></li>
+<li><a href="../../gh-300/05-enterprise/context-indexing-and-knowledge">Context, indexing &amp; knowledge bases</a></li>
+<li><a href="../../gh-300/05-enterprise/spaces-and-spark">Copilot Spaces &amp; Spark</a></li>
+<li><a href="../../gh-300/05-enterprise/rest-api-and-management">Management REST API &amp; audit logs</a></li>
+<li><a href="../../gh-300/05-enterprise/security-and-controls">Security &amp; access controls</a></li>
+</ul></details>
+<details class="nav-group" open>
+<summary>Module 6 · Developer Productivity</summary>
+<ul>
+<li><a href="../../gh-300/06-productivity/dotnet">.NET 8 &amp; C#</a></li>
+<li><a href="../../gh-300/06-productivity/angular">Angular 18</a></li>
+<li><a href="../../gh-300/06-productivity/azure">Azure</a></li>
+<li><a href="../../gh-300/06-productivity/sql-and-data" class="active">SQL Server &amp; data</a></li>
+<li><a href="../../gh-300/06-productivity/git-and-devops">Git &amp; Azure DevOps</a></li>
+</ul></details>
+<details class="nav-group">
+<summary>Module 7 · Cheat Sheets</summary>
+<ul>
+<li><a href="../../gh-300/08-cheat-sheets/prompt-engineering-cheatsheet">Prompt engineering cheat sheet</a></li>
+<li><a href="../../gh-300/08-cheat-sheets/feature-and-plan-comparison">Feature &amp; plan comparison</a></li>
+<li><a href="../../gh-300/08-cheat-sheets/responsible-ai-and-security">Responsible AI &amp; security</a></li>
+<li><a href="../../gh-300/08-cheat-sheets/exam-day-tips">Exam-day tips</a></li>
+</ul></details>
+<div class="nav-section-label">Practice &amp; Tools</div>
+<ul class="nav-tools">
+<li><a href="../../gh-300/dashboard">Study Dashboard</a></li>
+<li><a href="../../gh-300/question-bank">Question Bank</a></li>
+<li><a href="../../gh-300/mock-tests">Mock Exams</a></li>
+<li><a href="../../gh-300/flashcards">Flashcards</a></li>
+<li><a href="../../gh-300/labs">Hands-on Labs</a></li>
+</ul>
+        </nav>
+      </aside>
+      <div class="sidebar-scrim" data-action="toggle-nav"></div>
+
+      <main class="main" id="main">
+        <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="../../">Home</a><span class="sep">/</span><a href="../../gh-300/">GH-300</a><span class="sep">/</span><span>Module 6 · Developer Productivity</span><span class="sep">/</span><span aria-current="page">SQL Server &amp; data</span></nav>
+
+        <div class="doc-toolbar">
+          <span class="read-status" data-role="read-status"></span>
+          <div class="doc-toolbar-actions">
+            <label class="mark-read">
+              <input type="checkbox" data-action="mark-read" /> Mark as complete
+            </label>
+          </div>
+        </div>
+
+        <article class="doc" data-role="doc">
+          <header class="doc-head"><div class="eyebrow">Module 6 · Developer Productivity</div><h1>SQL Server &amp; data</h1></header>
+<p>Copilot helps with queries, stored procedures, indexing suggestions, and EF Core mappings — but SQL is where <strong>correctness, performance, and injection</strong> review matter most.</p>
+<h2 id="query-authoring-optimization" tabindex="-1"><a class="header-anchor" href="#query-authoring-optimization"><span>Query authoring &amp; optimization</span></a></h2>
+<pre><code class="language-text">// Prompt
+Rewrite this query to be sargable and avoid a scan: it filters on
+YEAR(OrderDate) = 2025. Suggest a supporting index.
+</code></pre>
+<pre><code class="language-sql">-- Sargable rewrite (uses an index on OrderDate)
+SELECT OrderId, Total
+FROM Orders
+WHERE OrderDate &gt;= '2025-01-01' AND OrderDate &lt; '2026-01-01';
+</code></pre>
+<div class="callout callout-best-practice"><div class="callout-title"><span class="callout-icon" aria-hidden="true">★</span>Best Practice</div><div class="callout-body">
+<p>Ask Copilot to make predicates <strong>sargable</strong>, to explain the execution plan implications, and to propose indexes — then validate with an actual execution plan. Treat index suggestions as hypotheses to test, not truths.</p>
+</div></div>
+<h2 id="stored-procedures" tabindex="-1"><a class="header-anchor" href="#stored-procedures"><span>Stored procedures</span></a></h2>
+<pre><code class="language-text">Write a stored procedure usp_GetOrdersByCustomer(@CustomerId INT, @FromUtc DATETIME2)
+that returns paged orders; use parameters (no dynamic SQL), SET NOCOUNT ON,
+and an OFFSET/FETCH page of 50.
+</code></pre>
+<h2 id="injection-safety" tabindex="-1"><a class="header-anchor" href="#injection-safety"><span>Injection safety</span></a></h2>
+<div class="callout callout-mistake"><div class="callout-title"><span class="callout-icon" aria-hidden="true">⚠</span>Common Mistake</div><div class="callout-body">
+<p>Accepting <strong>dynamic SQL built by string concatenation</strong>. It's an injection risk. Prefer parameters; if dynamic SQL is unavoidable, use <code>sp_executesql</code> with parameters and review carefully.</p>
+</div></div>
+<h2 id="ef-core-mapping-migrations" tabindex="-1"><a class="header-anchor" href="#ef-core-mapping-migrations"><span>EF Core mapping &amp; migrations</span></a></h2>
+<p>Give Copilot your entity and <code>DbContext</code> so generated configurations and migrations match. Always <strong>read migrations</strong> before applying — they can drop columns or data if intent is misread.</p>
+<h2 id="performance-review-checklist" tabindex="-1"><a class="header-anchor" href="#performance-review-checklist"><span>Performance review checklist</span></a></h2>
+<ul>
+<li>Sargable predicates; no functions on indexed columns in the <code>WHERE</code>.</li>
+<li>Right indexes; verify with execution plans, not guesses.</li>
+<li>Avoid <code>SELECT *</code>; project needed columns.</li>
+<li>Watch for implicit conversions and parameter sniffing.</li>
+</ul>
+<div class="callout callout-tip"><div class="callout-title"><span class="callout-icon" aria-hidden="true">✓</span>Exam Tip</div><div class="callout-body">
+<p>For data tasks, Copilot <strong>drafts</strong> SQL/EF quickly; you must verify <strong>correctness against the schema</strong>, <strong>performance via plans</strong>, and <strong>injection safety</strong> (parameters over concatenation).</p>
+</div></div>
+
+        </article>
+
+        <div class="prev-next"><a class="pn prev" href="../../gh-300/06-productivity/azure"><span class="pn-dir">Previous</span><span class="pn-title">Azure</span></a><a class="pn next" href="../../gh-300/06-productivity/git-and-devops"><span class="pn-dir">Next</span><span class="pn-title">Git &amp; Azure DevOps</span></a></div>
+
+        <footer class="doc-footer">
+          <p class="doc-footer-report">
+            Spotted a mistake on this page?
+            <button type="button" class="linklike" data-action="open-feedback" data-feedback-type="content">Report an issue</button>
+            ·
+            <button type="button" class="linklike" data-action="open-feedback" data-feedback-type="suggest-topic">Suggest a topic</button>
+          </p>
+          <p>&copy; 2026 CertHub · Created by
+            <a href="https://www.linkedin.com/in/sandeepaugustine" target="_blank" rel="noopener noreferrer">Sandeep Augustine</a>
+          </p>
+        </footer>
+      </main>
+
+      <aside class="toc-rail"><nav class="on-this-page" aria-label="On this page"><h4>On this page</h4><ul><li class="toc-2"><a href="#query-authoring-optimization">Query authoring optimization</a></li>
+<li class="toc-2"><a href="#stored-procedures">Stored procedures</a></li>
+<li class="toc-2"><a href="#injection-safety">Injection safety</a></li>
+<li class="toc-2"><a href="#ef-core-mapping-migrations">EF Core mapping migrations</a></li>
+<li class="toc-2"><a href="#performance-review-checklist">Performance review checklist</a></li></ul></nav></aside>
+    </div>
+
+    <!-- Search overlay -->
+    <div class="search-overlay" data-role="search-overlay" hidden>
+      <div class="search-box" role="dialog" aria-modal="true" aria-label="Search">
+        <input type="search" class="search-input" data-role="search-input" placeholder="Search all content…" autocomplete="off" />
+        <div class="search-results" data-role="search-results"></div>
+        <div class="search-hint">Press <kbd>Esc</kbd> to close · <kbd>&uarr;</kbd> <kbd>&darr;</kbd> to navigate · <kbd>Enter</kbd> to open</div>
+      </div>
+    </div>
+
+    <script src="../../assets/data/search-index.js"></script>
+    <script src="../../assets/data/content-data.js"></script>
+    <script type="module" src="../../assets/js/lib/feedback.js"></script>
+    <script src="../../assets/js/app.js"></script>
+    
+  </body>
+</html>

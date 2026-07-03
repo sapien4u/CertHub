@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exam overview & objectives · GH-300 · CertHub</title>
+    <meta name="description" content="Exam overview &amp; objectives — study guides, question banks, mock exams, and flashcards on CertHub, the offline-first certification study portal." />
+    <meta name="author" content="Sandeep Augustine" />
+    <meta name="keywords" content="certifications, certification study portal, exam prep, question bank, mock exam, flashcards, GH-300, GitHub Copilot certification, Azure AI certification, responsible AI, prompt engineering" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://sapien4u.github.io/CertHub/gh-300/01-introduction/exam-overview" />
+    <meta name="theme-color" content="#0d1526" />
+
+    <link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/icons/favicon-32.png" />
+    <link rel="apple-touch-icon" href="../../assets/icons/apple-touch-icon.png" />
+    <link rel="manifest" href="../../manifest.webmanifest" />
+
+    <!-- Open Graph / social preview -->
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="CertHub" />
+    <meta property="og:title" content="Exam overview &amp; objectives · CertHub" />
+    <meta property="og:description" content="Exam overview &amp; objectives — study guides, question banks, mock exams, and flashcards on CertHub, the offline-first certification study portal." />
+    <meta property="og:url" content="https://sapien4u.github.io/CertHub/gh-300/01-introduction/exam-overview" />
+    <meta property="og:image" content="https://sapien4u.github.io/CertHub/assets/social/og-cover.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="CertHub — offline-first certification study portal" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Exam overview &amp; objectives · CertHub" />
+    <meta name="twitter:description" content="Exam overview &amp; objectives — study guides, question banks, mock exams, and flashcards on CertHub, the offline-first certification study portal." />
+    <meta name="twitter:image" content="https://sapien4u.github.io/CertHub/assets/social/og-cover.png" />
+
+    <link rel="stylesheet" href="../../assets/css/styles.css" />
+    <script>
+      // Set theme before paint to avoid a flash of the wrong theme.
+      (function () {
+        try {
+          var t = localStorage.getItem("certhub:theme");
+          if (t) {
+            try { t = JSON.parse(t); } catch (e) {}
+            if (t === "dark" || t === "light")
+              document.documentElement.setAttribute("data-theme", t);
+          }
+        } catch (e) {}
+      })();
+    </script>
+    
+  </head>
+  <body class="" data-page="gh_300_01_introduction_exam_overview" data-root="../../" data-url="gh-300/01-introduction/exam-overview" data-title="Exam overview & objectives" data-cert="gh-300">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="topbar">
+      <button class="icon-btn nav-toggle" aria-label="Toggle navigation" data-action="toggle-nav">&#9776;</button>
+      <a class="brand" href="../../">
+        <span class="brand-mark">C</span><span class="brand-name">CertHub</span>
+      </a>
+
+      <button class="search-trigger" data-action="open-search" aria-label="Search">
+        <span class="search-ico">&#128269;</span>
+        <span class="search-label">Search content</span>
+        <span class="search-kbd">Ctrl K</span>
+      </button>
+
+      <div class="topbar-actions">
+        <button class="icon-btn" data-action="toggle-bookmark" title="Bookmark this page" aria-label="Bookmark this page">&#9734;</button>
+        <button class="icon-btn" data-action="print" title="Print this page" aria-label="Print this page">&#128424;</button>
+        <button class="icon-btn theme-btn" data-action="toggle-theme" title="Toggle dark mode" aria-label="Toggle dark mode">
+          <span class="theme-ico-dark">&#9790;</span><span class="theme-ico-light">&#9728;</span>
+        </button>
+      </div>
+    </header>
+
+    <div class="shell">
+      <aside class="sidebar" id="sidebar" aria-label="Documentation navigation">
+        <nav class="left-nav">
+          <a class="nav-cert" href="../../gh-300/">GH-300 Overview</a>
+<details class="nav-group" open>
+<summary>Module 1 · Introduction</summary>
+<ul>
+<li><a href="../../gh-300/01-introduction/what-is-github-copilot">What is GitHub Copilot</a></li>
+<li><a href="../../gh-300/01-introduction/ai-assistants-and-history">AI coding assistants &amp; history</a></li>
+<li><a href="../../gh-300/01-introduction/how-copilot-works">How Copilot works</a></li>
+<li><a href="../../gh-300/01-introduction/exam-overview" class="active">Exam overview &amp; objectives</a></li>
+</ul></details>
+<details class="nav-group">
+<summary>Module 2 · Copilot Fundamentals</summary>
+<ul>
+<li><a href="../../gh-300/02-fundamentals/inline-completion">Inline code completion</a></li>
+<li><a href="../../gh-300/02-fundamentals/copilot-chat">Copilot Chat</a></li>
+<li><a href="../../gh-300/02-fundamentals/edit-and-agent-mode">Edit mode &amp; Agent mode</a></li>
+<li><a href="../../gh-300/02-fundamentals/plan-mode">Plan Mode</a></li>
+<li><a href="../../gh-300/02-fundamentals/agent-sessions-and-subagents">Agent sessions &amp; sub-agents</a></li>
+<li><a href="../../gh-300/02-fundamentals/mcp-and-extensibility">MCP &amp; extensibility</a></li>
+<li><a href="../../gh-300/02-fundamentals/copilot-cli">Copilot in the CLI</a></li>
+<li><a href="../../gh-300/02-fundamentals/context-and-prompt-files">Context &amp; prompt files</a></li>
+<li><a href="../../gh-300/02-fundamentals/custom-instructions">Custom instructions</a></li>
+<li><a href="../../gh-300/02-fundamentals/pull-requests-and-code-review">Pull requests &amp; code review</a></li>
+<li><a href="../../gh-300/02-fundamentals/tests-docs-and-refactoring">Tests, docs, refactoring &amp; debugging</a></li>
+</ul></details>
+<details class="nav-group">
+<summary>Module 3 · Prompt Engineering</summary>
+<ul>
+<li><a href="../../gh-300/03-prompt-engineering/prompting-principles">Prompting principles</a></li>
+<li><a href="../../gh-300/03-prompt-engineering/prompting-techniques">Prompting techniques</a></li>
+<li><a href="../../gh-300/03-prompt-engineering/context-engineering">Context engineering</a></li>
+<li><a href="../../gh-300/03-prompt-engineering/iteration-and-templates">Iteration &amp; prompt templates</a></li>
+</ul></details>
+<details class="nav-group">
+<summary>Module 4 · Responsible AI</summary>
+<ul>
+<li><a href="../../gh-300/04-responsible-ai/responsible-ai-overview">Responsible AI overview</a></li>
+<li><a href="../../gh-300/04-responsible-ai/security-and-privacy">Security &amp; privacy</a></li>
+<li><a href="../../gh-300/04-responsible-ai/ip-licensing-and-duplication">IP, licensing &amp; duplication</a></li>
+<li><a href="../../gh-300/04-responsible-ai/validation-and-human-review">Validation &amp; human review</a></li>
+</ul></details>
+<details class="nav-group">
+<summary>Module 5 · Enterprise Features</summary>
+<ul>
+<li><a href="../../gh-300/05-enterprise/plans-and-comparison">Plans &amp; feature comparison</a></li>
+<li><a href="../../gh-300/05-enterprise/policies-and-governance">Policies &amp; governance</a></li>
+<li><a href="../../gh-300/05-enterprise/context-indexing-and-knowledge">Context, indexing &amp; knowledge bases</a></li>
+<li><a href="../../gh-300/05-enterprise/spaces-and-spark">Copilot Spaces &amp; Spark</a></li>
+<li><a href="../../gh-300/05-enterprise/rest-api-and-management">Management REST API &amp; audit logs</a></li>
+<li><a href="../../gh-300/05-enterprise/security-and-controls">Security &amp; access controls</a></li>
+</ul></details>
+<details class="nav-group">
+<summary>Module 6 · Developer Productivity</summary>
+<ul>
+<li><a href="../../gh-300/06-productivity/dotnet">.NET 8 &amp; C#</a></li>
+<li><a href="../../gh-300/06-productivity/angular">Angular 18</a></li>
+<li><a href="../../gh-300/06-productivity/azure">Azure</a></li>
+<li><a href="../../gh-300/06-productivity/sql-and-data">SQL Server &amp; data</a></li>
+<li><a href="../../gh-300/06-productivity/git-and-devops">Git &amp; Azure DevOps</a></li>
+</ul></details>
+<details class="nav-group">
+<summary>Module 7 · Cheat Sheets</summary>
+<ul>
+<li><a href="../../gh-300/08-cheat-sheets/prompt-engineering-cheatsheet">Prompt engineering cheat sheet</a></li>
+<li><a href="../../gh-300/08-cheat-sheets/feature-and-plan-comparison">Feature &amp; plan comparison</a></li>
+<li><a href="../../gh-300/08-cheat-sheets/responsible-ai-and-security">Responsible AI &amp; security</a></li>
+<li><a href="../../gh-300/08-cheat-sheets/exam-day-tips">Exam-day tips</a></li>
+</ul></details>
+<div class="nav-section-label">Practice &amp; Tools</div>
+<ul class="nav-tools">
+<li><a href="../../gh-300/dashboard">Study Dashboard</a></li>
+<li><a href="../../gh-300/question-bank">Question Bank</a></li>
+<li><a href="../../gh-300/mock-tests">Mock Exams</a></li>
+<li><a href="../../gh-300/flashcards">Flashcards</a></li>
+<li><a href="../../gh-300/labs">Hands-on Labs</a></li>
+</ul>
+        </nav>
+      </aside>
+      <div class="sidebar-scrim" data-action="toggle-nav"></div>
+
+      <main class="main" id="main">
+        <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="../../">Home</a><span class="sep">/</span><a href="../../gh-300/">GH-300</a><span class="sep">/</span><span>Module 1 · Introduction</span><span class="sep">/</span><span aria-current="page">Exam overview &amp; objectives</span></nav>
+
+        <div class="doc-toolbar">
+          <span class="read-status" data-role="read-status"></span>
+          <div class="doc-toolbar-actions">
+            <label class="mark-read">
+              <input type="checkbox" data-action="mark-read" /> Mark as complete
+            </label>
+          </div>
+        </div>
+
+        <article class="doc" data-role="doc">
+          <header class="doc-head"><div class="eyebrow">Module 1 · Introduction</div><h1>Exam overview &amp; objectives</h1></header>
+<p>The <strong>GH-300: GitHub Copilot</strong> certification validates that you can use Copilot effectively and responsibly across the development lifecycle, and that you understand its plans, administration, and Responsible-AI considerations.</p>
+<h2 id="format-at-a-glance" tabindex="-1"><a class="header-anchor" href="#format-at-a-glance"><span>Format at a glance</span></a></h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Exam code</td>
+<td>GH-300</td>
+</tr>
+<tr>
+<td>Style</td>
+<td>Multiple choice / multiple response</td>
+</tr>
+<tr>
+<td>Duration</td>
+<td>100 minutes</td>
+</tr>
+<tr>
+<td>Delivery</td>
+<td>Pearson VUE test center or online proctored</td>
+</tr>
+<tr>
+<td>Price</td>
+<td>$99 USD</td>
+</tr>
+<tr>
+<td>Validity</td>
+<td>24 months</td>
+</tr>
+<tr>
+<td>Audience</td>
+<td>Developers and administrators using GitHub Copilot</td>
+</tr>
+</tbody>
+</table></div>
+<div class="callout callout-note"><div class="callout-title"><span class="callout-icon" aria-hidden="true">ℹ</span>Note</div><div class="callout-body">
+<p>GitHub publishes two overlapping views of the objectives: the <a href="https://examregistration.github.com/certification/COPILOT">exam registration outline</a> (seven domains with fixed percentages) and the <a href="https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300">Microsoft Learn study guide</a> (six skill groups with ranges, updated for the <strong>January 2026</strong> exam revision). This portal uses a <strong>reconciled hybrid</strong>: it keeps testing as its own track while raising the Responsible-AI weighting to match the study guide's 15–20% range. Always reconfirm the current objectives on the official pages before your exam. The passing score is <strong>700</strong> (of 1000).</p>
+</div></div>
+<h2 id="objective-domains" tabindex="-1"><a class="header-anchor" href="#objective-domains"><span>Objective domains</span></a></h2>
+<p>This portal maps to seven domains with reconciled weightings:</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>#</th>
+<th>Domain</th>
+<th>Weight</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>Responsible AI</strong> — risks, limitations, ethics, and validating AI output</td>
+<td>17%</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>GitHub Copilot plans and features</strong> — Free, Pro, Business, Enterprise; features across surfaces <em>(largest domain)</em></td>
+<td>27%</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>How GitHub Copilot works and handles data</strong> — the suggestion lifecycle, context building, proxy filtering, and data flow</td>
+<td>12%</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>Prompt crafting and prompt engineering</strong> — structure, zero/few-shot, and best practices</td>
+<td>12%</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>Developer use cases for AI</strong> — code generation, refactoring, docs, and modernization across the SDLC</td>
+<td>12%</td>
+</tr>
+<tr>
+<td>6</td>
+<td><strong>Testing with GitHub Copilot</strong> — unit/integration tests, edge cases, and assertions</td>
+<td>8%</td>
+</tr>
+<tr>
+<td>7</td>
+<td><strong>Privacy fundamentals and context exclusions</strong> — content exclusions, ownership, duplication detection, and safeguards</td>
+<td>12%</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="how-to-use-this-portal-to-prepare" tabindex="-1"><a class="header-anchor" href="#how-to-use-this-portal-to-prepare"><span>How to use this portal to prepare</span></a></h2>
+<ul>
+<li>Work through <strong>Modules 1–6</strong> in order; each page ends with Exam Tip, Best Practice, and Common Mistake callouts.</li>
+<li>Drill the <strong>Question Bank</strong> by domain and difficulty; revisit anything you get wrong.</li>
+<li>Sit the <strong>Mock Exams</strong> under timed conditions, then use the domain breakdown to target weak areas.</li>
+<li>Use <strong>Flashcards</strong> for rapid recall of features, plans, and Responsible-AI terms.</li>
+<li>Keep the <strong>Cheat Sheets</strong> for last-minute review.</li>
+</ul>
+<div class="callout callout-tip"><div class="callout-title"><span class="callout-icon" aria-hidden="true">✓</span>Exam Tip</div><div class="callout-body">
+<p><strong>Plans and features (27%)</strong> is still the largest single domain, but the <strong>January 2026 revision raised the Responsible-AI weighting to 15–20%</strong> — so budget real time there, not just on features. Also review the newer capabilities the study guide now names explicitly: <strong>Plan Mode, MCP servers, agent sessions and sub-agents, Copilot Spaces, Spark, instructions files, and the management REST API</strong>.</p>
+</div></div>
+<div class="callout callout-best-practice"><div class="callout-title"><span class="callout-icon" aria-hidden="true">★</span>Best Practice</div><div class="callout-body">
+<p>Track completion on the <strong>Study Dashboard</strong>. Aim for consistent 80%+ accuracy per domain in the question bank before attempting a full mock under time pressure.</p>
+</div></div>
+<h2 id="study-checklist" tabindex="-1"><a class="header-anchor" href="#study-checklist"><span>Study checklist</span></a></h2>
+<ul>
+<li>[ ] I can explain how Copilot generates suggestions and why context matters.</li>
+<li>[ ] I can compare Individual, Business, and Enterprise plans.</li>
+<li>[ ] I can name the core features across editor, chat, PRs, and CLI.</li>
+<li>[ ] I can apply prompt-engineering techniques with concrete examples.</li>
+<li>[ ] I can describe Responsible-AI risks and the required human-in-the-loop.</li>
+<li>[ ] I understand privacy, data handling, content exclusions, and duplication filtering.</li>
+<li>[ ] I know the key admin policies and governance controls.</li>
+</ul>
+
+        </article>
+
+        <div class="prev-next"><a class="pn prev" href="../../gh-300/01-introduction/how-copilot-works"><span class="pn-dir">Previous</span><span class="pn-title">How Copilot works</span></a><a class="pn next" href="../../gh-300/02-fundamentals/inline-completion"><span class="pn-dir">Next</span><span class="pn-title">Inline code completion</span></a></div>
+
+        <footer class="doc-footer">
+          <p class="doc-footer-report">
+            Spotted a mistake on this page?
+            <button type="button" class="linklike" data-action="open-feedback" data-feedback-type="content">Report an issue</button>
+            ·
+            <button type="button" class="linklike" data-action="open-feedback" data-feedback-type="suggest-topic">Suggest a topic</button>
+          </p>
+          <p>&copy; 2026 CertHub · Created by
+            <a href="https://www.linkedin.com/in/sandeepaugustine" target="_blank" rel="noopener noreferrer">Sandeep Augustine</a>
+          </p>
+        </footer>
+      </main>
+
+      <aside class="toc-rail"><nav class="on-this-page" aria-label="On this page"><h4>On this page</h4><ul><li class="toc-2"><a href="#format-at-a-glance">Format at a glance</a></li>
+<li class="toc-2"><a href="#objective-domains">Objective domains</a></li>
+<li class="toc-2"><a href="#how-to-use-this-portal-to-prepare">How to use this portal to prepare</a></li>
+<li class="toc-2"><a href="#study-checklist">Study checklist</a></li></ul></nav></aside>
+    </div>
+
+    <!-- Search overlay -->
+    <div class="search-overlay" data-role="search-overlay" hidden>
+      <div class="search-box" role="dialog" aria-modal="true" aria-label="Search">
+        <input type="search" class="search-input" data-role="search-input" placeholder="Search all content…" autocomplete="off" />
+        <div class="search-results" data-role="search-results"></div>
+        <div class="search-hint">Press <kbd>Esc</kbd> to close · <kbd>&uarr;</kbd> <kbd>&darr;</kbd> to navigate · <kbd>Enter</kbd> to open</div>
+      </div>
+    </div>
+
+    <script src="../../assets/data/search-index.js"></script>
+    <script src="../../assets/data/content-data.js"></script>
+    <script type="module" src="../../assets/js/lib/feedback.js"></script>
+    <script src="../../assets/js/app.js"></script>
+    
+  </body>
+</html>

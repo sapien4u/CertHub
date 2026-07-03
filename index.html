@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CertHub · A curated learning portal for GitHub Copilot & cloud certifications</title>
+    <meta name="description" content="CertHub is a free, offline-first study portal for technology certifications — deep-dive modules, a scenario question bank, timed mock exams, flashcards, and hands-on labs, all tracked locally in your browser. Flagship track: GH-300 GitHub Copilot, with Azure AI tracks on the way." />
+    <meta name="author" content="Sandeep Augustine" />
+    <meta name="keywords" content="certifications, certification study portal, exam prep, question bank, mock exam, flashcards, GH-300, GitHub Copilot certification, Azure AI certification, responsible AI, prompt engineering" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://sapien4u.github.io/CertHub/" />
+    <meta name="theme-color" content="#0d1526" />
+
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/icons/favicon-32.png" />
+    <link rel="apple-touch-icon" href="./assets/icons/apple-touch-icon.png" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+
+    <!-- Open Graph / social preview -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="CertHub" />
+    <meta property="og:title" content="CertHub — A curated learning portal for GitHub Copilot &amp; cloud certifications" />
+    <meta property="og:description" content="CertHub is a free, offline-first study portal for technology certifications — deep-dive modules, a scenario question bank, timed mock exams, flashcards, and hands-on labs, all tracked locally in your browser. Flagship track: GH-300 GitHub Copilot, with Azure AI tracks on the way." />
+    <meta property="og:url" content="https://sapien4u.github.io/CertHub/" />
+    <meta property="og:image" content="https://sapien4u.github.io/CertHub/assets/social/og-cover.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="CertHub — offline-first certification study portal" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="CertHub — A curated learning portal for GitHub Copilot &amp; cloud certifications" />
+    <meta name="twitter:description" content="CertHub is a free, offline-first study portal for technology certifications — deep-dive modules, a scenario question bank, timed mock exams, flashcards, and hands-on labs, all tracked locally in your browser. Flagship track: GH-300 GitHub Copilot, with Azure AI tracks on the way." />
+    <meta name="twitter:image" content="https://sapien4u.github.io/CertHub/assets/social/og-cover.png" />
+
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem("certhub:theme");
+          if (t) {
+            try { t = JSON.parse(t); } catch (e) {}
+            if (t === "dark" || t === "light")
+              document.documentElement.setAttribute("data-theme", t);
+          }
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body class="home" data-page="home" data-root="./" data-url="">
+    <header class="topbar">
+      <a class="brand" href="./">
+        <span class="brand-mark">C</span><span class="brand-name">CertHub</span>
+      </a>
+      <button class="search-trigger" data-action="open-search" aria-label="Search">
+        <span class="search-ico">&#128269;</span>
+        <span class="search-label">Search content</span>
+        <span class="search-kbd">Ctrl K</span>
+      </button>
+      <div class="topbar-actions">
+        <button class="icon-btn theme-btn" data-action="toggle-theme" title="Toggle dark mode" aria-label="Toggle dark mode">
+          <span class="theme-ico-dark">&#9790;</span><span class="theme-ico-light">&#9728;</span>
+        </button>
+      </div>
+    </header>
+
+    <main class="home-main">
+      <section class="hero">
+        <h1>Learn smarter. Get certified faster.</h1>
+        <p class="hero-lede">CertHub is an offline-first, documentation-style study platform. Learn every objective, practice with a scenario-based question bank, drill flashcards, and sit full timed mock exams — all tracked locally in your browser.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="./gh-300/">Start GH-300 track</a>
+          <a class="btn btn-ghost" href="./gh-300/mock-tests">Try a mock exam</a>
+        </div>
+      </section>
+
+      <section class="home-section">
+        <h2>Certification tracks</h2>
+        <div class="grid"><a class="card" href="./gh-300/">
+        <span class="badge live">GH-300</span>
+        <h3>GH-300: GitHub Copilot</h3>
+        <p>Master GitHub Copilot end to end and prepare for the GH-300 certification — features, prompt engineering, Responsible AI, and enterprise administration, with examples in .NET 8, Angular 18, Azure, and SQL Server.</p>
+        <span class="card-foot"><span>Start learning</span><span class="arrow">&rarr;</span></span>
+      </a>
+<div class="card card--soon" aria-disabled="true">
+        <span class="badge soon">AI-901</span>
+        <h3>AI-901: Azure AI Fundamentals</h3>
+        <p>Placeholder track — modules, question bank, mock exams, and flashcards will be authored here next.</p>
+        <span class="card-foot"><span>Coming soon</span></span>
+      </div>
+<div class="card card--soon" aria-disabled="true">
+        <span class="badge soon">AI-103</span>
+        <h3>AI-103: Azure AI Engineer</h3>
+        <p>Placeholder track — modules, question bank, mock exams, and flashcards will be authored here next.</p>
+        <span class="card-foot"><span>Coming soon</span></span>
+      </div>
+<div class="card card--soon" aria-disabled="true">
+        <span class="badge soon">AI-200</span>
+        <h3>AI-200: Azure AI Fundamentals</h3>
+        <p>Placeholder track — modules, question bank, mock exams, and flashcards will be authored here next.</p>
+        <span class="card-foot"><span>Coming soon</span></span>
+      </div></div>
+      </section>
+
+      <section class="home-section">
+        <h2>What's inside</h2>
+        <div class="grid feature-grid">
+          <div class="card"><h3>Deep-dive modules</h3><p>Every exam objective explained for experienced developers, with real-world code examples.</p></div>
+          <div class="card"><h3>Scenario question bank</h3><p>Practice by topic and difficulty with full explanations of why each option is right or wrong.</p></div>
+          <div class="card"><h3>Timed mock exams</h3><p>Full-length exams with a timer, review mode, score report, and weak-area analysis.</p></div>
+          <div class="card"><h3>Flashcards</h3><p>Spaced recall for features, prompt patterns, Responsible AI, and enterprise controls.</p></div>
+          <div class="card"><h3>Hands-on labs</h3><p>Guided exercises with scenarios, prompts, expected output, and best practices.</p></div>
+          <div class="card"><h3>Offline &amp; private</h3><p>Runs fully in your browser. Progress, bookmarks, and notes stay on your device.</p></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <span>&copy; 2026 CertHub</span>
+        <span class="footer-links">
+          <button type="button" class="linklike" data-action="open-feedback" data-feedback-type="feedback">Feedback &amp; suggestions</button>
+        </span>
+        <span class="footer-credit">Created by
+          <a href="https://www.linkedin.com/in/sandeepaugustine" target="_blank" rel="noopener noreferrer">Sandeep Augustine</a>
+        </span>
+      </div>
+    </footer>
+
+    <div class="search-overlay" data-role="search-overlay" hidden>
+      <div class="search-box" role="dialog" aria-modal="true" aria-label="Search">
+        <input type="search" class="search-input" data-role="search-input" placeholder="Search all content…" autocomplete="off" />
+        <div class="search-results" data-role="search-results"></div>
+        <div class="search-hint">Press <kbd>Esc</kbd> to close</div>
+      </div>
+    </div>
+
+    <script src="./assets/data/search-index.js"></script>
+    <script src="./assets/data/content-data.js"></script>
+    <script type="module" src="./assets/js/lib/feedback.js"></script>
+    <script src="./assets/js/app.js"></script>
+  </body>
+</html>
