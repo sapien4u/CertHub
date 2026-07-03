@@ -206,8 +206,44 @@ html[data-theme="light"] .theme-ico-light {
   display: none;
 }
 
-/* ---------- Shell layout ---------- */
-.shell {
+/* ---------- Install app button ---------- */
+.install-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 38px;
+  padding: 0 12px;
+  border-radius: 9px;
+  border: 1px solid var(--accent);
+  background: var(--accent);
+  color: #fff;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.install-btn:hover {
+  filter: brightness(1.08);
+}
+.install-btn[hidden] {
+  display: none;
+}
+.install-ico {
+  font-size: 1rem;
+  line-height: 1;
+}
+@media (max-width: 560px) {
+  .install-btn .install-label {
+    display: none;
+  }
+  .install-btn {
+    padding: 0;
+    width: 38px;
+    justify-content: center;
+  }
+}
+
+
   display: grid;
   grid-template-columns: var(--sidebar-w) minmax(0, 1fr) var(--toc-w);
   max-width: var(--maxw);

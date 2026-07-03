@@ -71,6 +71,18 @@
     }
     return a;
   };
+  var pad2 = function (n) {
+    return (n < 10 ? "0" : "") + n;
+  };
+  // "1h 20m" / "45m" / "30s" from a duration in seconds.
+  var formatDuration = function (sec) {
+    sec = Math.max(0, Math.round(sec || 0));
+    var h = Math.floor(sec / 3600);
+    var m = Math.floor((sec % 3600) / 60);
+    if (h > 0) return h + "h " + m + "m";
+    if (m > 0) return m + "m";
+    return sec + "s";
+  };
 
   function certData() {
     return (CERTHUB.data && CERTHUB.data[CERT]) || {};
@@ -121,6 +133,9 @@
         break;
       case "open-feedback":
         Feedback.open(t.getAttribute("data-feedback-type") || "");
+        break;
+      case "install-app":
+        Install.trigger();
         break;
     }
   });
@@ -401,6 +416,81 @@
     list.unshift({ url: PAGE_URL, title: PAGE_TITLE, ts: Date.now() });
     Store.set(key, list.slice(0, 12));
   }
+
+  /* ---------------- Active study time ---------------------------------
+     Counts only *engaged* time: the tab must be visible and the user must
+     have interacted within the idle window. Time is accumulated per day
+     (local date) plus a running total, stored locally like everything else. */
+  var ActiveTime = {
+    key: "time",
+    TICK: 5, // seconds added per heartbeat while active
+    IDLE_LIMIT: 60, // seconds without interaction before we pause counting
+    KEEP_DAYS: 180, // cap the per-day history
+    lastActivity: Date.now(),
+    read: function () {
+      var d = Store.get(this.key, null);
+      if (!d || typeof d !== "object") d = {};
+      if (typeof d.totalSec !== "number") d.totalSec = 0;
+      if (!d.days || typeof d.days !== "object") d.days = {};
+      return d;
+    },
+    write: function (d) {
+      Store.set(this.key, d);
+    },
+    dateKey: function (date) {
+      var n = date || new Date();
+      return n.getFullYear() + "-" + pad2(n.getMonth() + 1) + "-" + pad2(n.getDate());
+    },
+    today: function () {
+      return this.dateKey();
+    },
+    add: function (sec) {
+      var d = this.read();
+      d.totalSec += sec;
+      var t = this.today();
+      d.days[t] = (d.days[t] || 0) + sec;
+      var keys = Object.keys(d.days).sort();
+      if (keys.length > this.KEEP_DAYS) {
+        keys.slice(0, keys.length - this.KEEP_DAYS).forEach(function (k) {
+          delete d.days[k];
+        });
+      }
+      this.write(d);
+    },
+    totals: function () {
+      var d = this.read();
+      var week = 0;
+      for (var i = 0; i < 7; i++) {
+        var day = new Date();
+        day.setDate(day.getDate() - i);
+        week += d.days[this.dateKey(day)] || 0;
+      }
+      return {
+        total: d.totalSec || 0,
+        today: d.days[this.today()] || 0,
+        week: week,
+        activeDays: Object.keys(d.days).length,
+      };
+    },
+    init: function () {
+      var self = this;
+      var mark = function () {
+        self.lastActivity = Date.now();
+      };
+      ["mousemove", "mousedown", "keydown", "scroll", "touchstart", "click"].forEach(function (ev) {
+        window.addEventListener(ev, mark, { passive: true });
+      });
+      document.addEventListener("visibilitychange", function () {
+        if (!document.hidden) self.lastActivity = Date.now();
+      });
+      setInterval(function () {
+        if (document.hidden) return;
+        if (Date.now() - self.lastActivity <= self.IDLE_LIMIT * 1000) {
+          self.add(self.TICK);
+        }
+      }, this.TICK * 1000);
+    },
+  };
 
   /* ---------------- Notes ---------------- */
   var Notes = {
@@ -1310,6 +1400,12 @@
     }).length;
     setText("fc-known", known);
 
+    // Study time (engaged time across the whole site)
+    var tt = ActiveTime.totals();
+    setText("time-total", formatDuration(tt.total));
+    setText("time-today", formatDuration(tt.today));
+    setText("time-week", formatDuration(tt.week));
+
     // Domain readiness
     var drBox = $('[data-role="domain-readiness"]');
     if (drBox) {
@@ -1562,6 +1658,79 @@
       navigator.serviceWorker.register(ROOT + "sw.js").catch(function () {});
     });
   }
+
+  /* ---------------- Install to home screen / desktop -----------------
+     Makes the PWA install discoverable. Browsers that support the install
+     prompt fire `beforeinstallprompt`; we stash it and reveal an "Install
+     app" button. iOS Safari has no such event, so we show the button with
+     a short "Add to Home Screen" hint instead. The button hides itself once
+     the app is installed or when already running in standalone mode. */
+  var Install = {
+    deferred: null,
+    isStandalone: function () {
+      return (
+        window.matchMedia("(display-mode: standalone)").matches ||
+        window.navigator.standalone === true
+      );
+    },
+    isIOS: function () {
+      return (
+        /iphone|ipad|ipod/i.test(navigator.userAgent) &&
+        !/crios|fxios/i.test(navigator.userAgent)
+      );
+    },
+    buttons: function () {
+      return $$('[data-action="install-app"]');
+    },
+    show: function () {
+      this.buttons().forEach(function (b) {
+        b.hidden = false;
+      });
+    },
+    hide: function () {
+      this.buttons().forEach(function (b) {
+        b.hidden = true;
+      });
+    },
+    init: function () {
+      var self = this;
+      if (this.isStandalone()) return; // already installed
+
+      window.addEventListener("beforeinstallprompt", function (e) {
+        e.preventDefault();
+        self.deferred = e;
+        self.show();
+      });
+      window.addEventListener("appinstalled", function () {
+        self.deferred = null;
+        self.hide();
+      });
+
+      // iOS: no beforeinstallprompt — surface the button so users know it can
+      // be installed, and explain the manual Share-sheet step on tap.
+      if (this.isIOS()) this.show();
+    },
+    trigger: function () {
+      var self = this;
+      if (this.deferred) {
+        this.deferred.prompt();
+        this.deferred.userChoice.then(function () {
+          self.deferred = null;
+          self.hide();
+        });
+        return;
+      }
+      if (this.isIOS()) {
+        alert(
+          "To install CertHub: tap the Share button, then choose \u201CAdd to Home Screen.\u201D"
+        );
+        return;
+      }
+      alert(
+        "Your browser can install CertHub from its menu (look for \u201CInstall\u201D or \u201CAdd to Home Screen\u201D)."
+      );
+    },
+  };
 
   /* ---------------- Activity trace (attached to bug reports) ----------
      A short, in-session breadcrumb of what the user did, kept only in
@@ -1937,6 +2106,7 @@
     if (yr) yr.textContent = new Date().getFullYear();
 
     initTrace();
+    ActiveTime.init();
     Search.ready();
     initCodeCopy();
     initScrollSpy();
@@ -1953,6 +2123,7 @@
 
     initEasterEggs();
     registerServiceWorker();
+    Install.init();
     initFeedbackLauncher();
   });
 })();
